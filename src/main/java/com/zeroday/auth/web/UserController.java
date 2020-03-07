@@ -1,5 +1,8 @@
 package com.zeroday.auth.web;
 
+import com.zeroday.auth.exception.BookNotFoundException;
+import com.zeroday.auth.exception.UserNotFoundException;
+import com.zeroday.auth.model.Book;
 import com.zeroday.auth.model.User;
 import com.zeroday.auth.service.SecurityService;
 import com.zeroday.auth.service.UserService;
@@ -62,6 +65,16 @@ public class UserController {
     @GetMapping({"/", "/gradeChange"})
     public String gradeChange(Model model) {
         return "gradeChange";
+    }
+
+    @RequestMapping("/delete/{username}")
+    public String deleteBook(@PathVariable(value = "username") String username, Model model) throws UserNotFoundException {
+        User user = userService.findByUsername(username);
+
+        userService.delete(user);
+
+        return "login";
+
     }
 
 }
