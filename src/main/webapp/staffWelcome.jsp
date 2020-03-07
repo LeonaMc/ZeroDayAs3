@@ -11,15 +11,15 @@
     <h2>
         <a href="/new">Add New Module</a>
         &nbsp;&nbsp;&nbsp;
-        <a href="/list">List All Modules</a>
+        <a href="/list">Module Management</a>
 
-        <a href="/gradeChange">List All Modules</a>
+        <a href="/gradeChange">Change Grades</a>
 
     </h2>
 </center>
 <div align="center">
     <table border="1" cellpadding="5">
-        <caption><h2>List of Books</h2></caption>
+        <caption><h2>List of Modules</h2></caption>
         <tr>
             <th>ID</th>
             <th>Module</th>
