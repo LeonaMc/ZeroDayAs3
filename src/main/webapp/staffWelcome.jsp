@@ -11,7 +11,7 @@
     <h2>
         <a href="/new">Add New Module</a>
         &nbsp;&nbsp;&nbsp;
-        <a href="/">List All Books</a>
+        <a href="/list">List All Modules</a>
 
     </h2>
 </center>
