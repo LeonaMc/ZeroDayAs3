@@ -16,7 +16,7 @@
     </h2>
 </center>
 <div align="center">
-    <form action="save" method="post">
+    <form action="/staffWelcome" method="post">
         <table border="1" cellpadding="5">
             <caption>
                 <h2>
