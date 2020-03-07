@@ -67,16 +67,11 @@ public class BookController {
     }
 
     // Update a Note
-    @RequestMapping(value = "books/save", method = RequestMethod.POST)
+    @RequestMapping(value = "staffWelcome", method = RequestMethod.POST)
     public String updateNote( @ModelAttribute("book")  Book book, Model model) throws BookNotFoundException {
-      /**  Book oldBook = bookRepository.findById(bookId)
-                .orElseThrow(() -> new BookNotFoundException(bookId));
 
-        oldBook.setBook_name(book.getBook_name());
-        oldBook.setAuthor_name(book.getAuthor_name());
-        oldBook.setIsbn(book.getIsbn());
 
-        bookRepository.save(book); **/
+        bookRepository.save(book);
 
         return viewHomePage(model);
     }
