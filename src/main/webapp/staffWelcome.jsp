@@ -3,13 +3,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>Books Store Application</title>
+    <title>Manage Modules</title>
 </head>
 <body>
 <center>
-    <h1>Books Management</h1>
+    <h1>Module Management</h1>
     <h2>
-        <a href="/new">Add New Book</a>
+        <a href="/new">Add New Module</a>
         &nbsp;&nbsp;&nbsp;
         <a href="/">List All Books</a>
 
@@ -20,9 +20,8 @@
         <caption><h2>List of Books</h2></caption>
         <tr>
             <th>ID</th>
-            <th>Title</th>
-
-            <th>ISBN</th>
+            <th>Module</th>
+            <th>School</th>
             <th>Actions</th>
         </tr>
         <c:forEach var="book" items="${listBooks}">
