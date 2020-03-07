@@ -13,8 +13,6 @@
         &nbsp;&nbsp;&nbsp;
         <a href="/list">List All Modules</a>
 
-        <a href="/gradeChange">List All Modules</a>
-
     </h2>
 </center>
 <div align="center">

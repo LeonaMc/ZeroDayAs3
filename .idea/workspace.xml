@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7031775-1343-4633-ada7-8433833a97ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/web/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/staffWelcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/staffWelcome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zeroday/auth/model/AuthorshipId.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zeroday/auth/model/AuthorshipId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zeroday/auth/service/SecurityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zeroday/auth/service/SecurityServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zeroday/auth/service/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zeroday/auth/service/UserDetailsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zeroday/auth/validator/UserValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zeroday/auth/validator/UserValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zeroday/auth/web/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zeroday/auth/web/BookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/gradeChange.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/gradeChange.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +180,7 @@
       <workItem from="1583597902223" duration="821000" />
       <workItem from="1583599278472" duration="949000" />
       <workItem from="1583600250902" duration="68000" />
-      <workItem from="1583600334326" duration="80000" />
+      <workItem from="1583600334326" duration="168000" />
     </task>
     <servers />
   </component>
