@@ -3,13 +3,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>Staff Welcome Page</title>
+    <title>Grade Change Page</title>
 </head>
 <body>
 <center>
-    <h1>Welcome Staff</h1>
+    <h1>Grade Change</h1>
     <h2>
-        <a href="/new">Add New Module</a>
+        <a href="/new">Add New Student</a>
         &nbsp;&nbsp;&nbsp;
         <a href="/list">List All Modules</a>
 
