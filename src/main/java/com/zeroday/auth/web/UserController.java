@@ -70,7 +70,6 @@ public class UserController {
     @RequestMapping("/delete/{username}")
     public String deleteBook(@PathVariable(value = "username") String username, Model model) throws UserNotFoundException {
         User user = userService.findByUsername(username);
-
         userService.delete(user);
 
         return "login";

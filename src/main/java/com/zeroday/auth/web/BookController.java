@@ -30,7 +30,7 @@ public class BookController {
     @Autowired
     AuthorRepository authorRepository;
 
-    @RequestMapping({"/", "/list"})
+    @RequestMapping({"/list"})
     public String viewHomePage(Model model) {
         List<Book> listBooks = bookRepository.findAll();
         model.addAttribute("listBooks", listBooks);
