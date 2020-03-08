@@ -9,9 +9,9 @@
 <center>
     <h1>Grade Change</h1>
     <h2>
-        <a href="/new">Add New Student</a>
+        <a href="/newgrade">Add New Grade Information</a>
         &nbsp;&nbsp;&nbsp;
-        <a href="/list">List All Modules</a>
+        <a href="/listgrades">List All Grades</a>
 
     </h2>
 </center>
@@ -19,21 +19,21 @@
     <table border="1" cellpadding="5">
         <caption><h2>List of Grades</h2></caption>
         <tr>
-            <th>ID</th>
+            <th>Student ID</th>
+            <th>Student Name</th>
             <th>Module</th>
-            <th>School</th>
-            <th>Actions</th>
+            <th>Grade</th>
         </tr>
-        <c:forEach var="book" items="${listBooks}">
+        <c:forEach var="grade" items="${listgrades}">
             <tr>
-                <td><c:out value="${book.id}" /></td>
-                <td><c:out value="${book.book_name}" /></td>
-
-                <td><c:out value="${book.isbn}" /></td>
+                <td><c:out value="${grade.studentID}" /></td>
+                <td><c:out value="${grade.studentName}" /></td>
+                <td><c:out value="${grade.module}" /></td>
+                <td><c:out value="${grade.grade}" /></td>
                 <td>
-                    <a href="/books/${book.id}"/>Edit</a>
+                    <a href="/grades/${grade.studentID}"/>Edit</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/delete/${book.id}"  />Delete</a>
+                    <a href="/deletegrade/${grade.studentID}"  />Delete</a>
                 </td>
             </tr>
         </c:forEach>
