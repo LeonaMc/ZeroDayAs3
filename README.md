@@ -46,17 +46,17 @@ Staff can modify module info. Staff are allowed to modify information about modu
 
 Staff can input grades. Staff are allowed to input grades for students when a module terminates.
 
-#SQL Commands:
+# SQL Commands:
 create database library;
 create user 'root'@'localhost' identified by 'root';
 grant all privileges on *.* to 'root'@'localhost';
 
-#Group Leader:
+# Group Leader:
 Leona McNulty
-#Team Members:
+# Team Members:
 Ciarán Conlon, Anna Davison
 
-#Diary:
+# Diary:
 Leona: Grade Page creation and directing from welcome staff to grade page
        Register and Login: Students can register to the WebApp: Users can register by providing their personal details (name, surname, student ID, address, phone number, email address). The student will be able to create a username and a password that can be used during future logins.
        Duplicate username detection. No field can be empty on registration form. Password must be 8 words or more and less than 32 words. Autologin. Mobile number must be 7 or more/15 or less digits (International Standard) -- See UserValidator.java for more details. Country of origin selector implemented.
