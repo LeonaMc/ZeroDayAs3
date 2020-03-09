@@ -2,6 +2,7 @@ package com.zeroday.auth.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+
 @Entity
 @Table(name = "modules")
 public class Module {
@@ -11,8 +12,8 @@ public class Module {
     @NotBlank
     private String module_name;
 
-    @NotBlank
     private String school;
+
     public Module(){
         super();
     }
@@ -20,7 +21,6 @@ public class Module {
         super();
         this.id = id;
         this.module_name = module_name;
-
         this.school=school;
     }
     public Long getId() {
@@ -29,6 +29,7 @@ public class Module {
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getModule_name() {
         return module_name;
     }
@@ -36,10 +37,10 @@ public class Module {
         this.module_name = module_name;
     }
 
-    public String getIsbn() {
+    public String getSchool() {
         return school;
     }
-    public void setIsbn(String school) {
+    public void setSchool(String school) {
         this.school = school;
     }
 }

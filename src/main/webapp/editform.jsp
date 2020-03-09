@@ -43,10 +43,25 @@
             </tr>
 
             <tr>
+                <th>Authors: </th>
+                <c:forEach var="author" items="${authors}">
+                    <td>
+                        <input type="text" name="name" size="45"
+                               value="<c:out value='${author.author_first_name} ${author.author_last_name}'/>" readonly
+                        />
+                    </td>
+
+
+                </c:forEach>
+            </tr>
+            <tr>
+            <tr>
+                <td colspan="2" align="center">
                 <td colspan="2" align="center">
                     <input type="submit" value="Save" />
                 </td>
             </tr>
+
         </table>
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
