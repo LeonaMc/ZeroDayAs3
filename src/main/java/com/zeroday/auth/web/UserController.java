@@ -65,6 +65,16 @@ public class UserController {
         return "gradeChange";
     }
 
+    @GetMapping({"/moduleEnrolment"})
+    public String moduleEnrolment(Model model) {
+        return "moduleEnrolment";
+    }
+
+    @GetMapping({"/viewGrades"})
+    public String viewGrades(Model model) {
+        return "viewGrades";
+    }
+
     @GetMapping({"/payFees"})
     public String payFees(Model model)
     {
