@@ -64,7 +64,7 @@ public class UserController {
         return "gradeChange";
     }
 
-    @RequestMapping("/delete/{username}")
+    @RequestMapping("/remove/{username}")
     public String deleteUser(@PathVariable(value = "username") String username){
         User user = userService.findByUsername(username);
         userService.delete(user);
