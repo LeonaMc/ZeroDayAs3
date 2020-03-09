@@ -1,6 +1,7 @@
 package com.zeroday.auth.web;
 
 import com.zeroday.auth.model.User;
+import com.zeroday.auth.model.payFees;
 import com.zeroday.auth.service.SecurityService;
 import com.zeroday.auth.service.UserService;
 import com.zeroday.auth.validator.UserValidator;
@@ -62,6 +63,13 @@ public class UserController {
     @GetMapping({"/gradeChange"})
     public String gradeChange(Model model) {
         return "gradeChange";
+    }
+
+    @GetMapping({"/payFees"})
+    public String payFees(Model model)
+    {
+        model.addAttribute("payFees", new payFees());
+        return "payFees";
     }
 
     @RequestMapping("/remove/{username}")
