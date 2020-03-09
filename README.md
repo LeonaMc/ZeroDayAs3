@@ -70,7 +70,7 @@ Leona: Grade Page creation and directing from welcome staff to grade page
        -- See UserValidator.java for more details. Country of origin selector
        implemented.
 
-Anna:  Fix 'save' button when adding a new book
+Anna:  Fix 'save' button when adding a new module
        
        Edit page doesn't save
        

@@ -27,16 +27,16 @@
             <th>School</th>
             <th>Actions</th>
         </tr>
-        <c:forEach var="book" items="${listBooks}">
+        <c:forEach var="module" items="${listModules}">
             <tr>
-                <td><c:out value="${book.id}" /></td>
-                <td><c:out value="${book.book_name}" /></td>
+                <td><c:out value="${module.id}" /></td>
+                <td><c:out value="${module.module_name}" /></td>
 
-                <td><c:out value="${book.isbn}" /></td>
+                <td><c:out value="${module.school}" /></td>
                 <td>
-                    <a href="/books/${book.id}"/>Edit</a>
+                    <a href="/modules/${module.id}"/>Edit</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/delete/${book.id}"  />Delete</a>
+                    <a href="/delete/${module.id}"  />Delete</a>
                 </td>
             </tr>
         </c:forEach>

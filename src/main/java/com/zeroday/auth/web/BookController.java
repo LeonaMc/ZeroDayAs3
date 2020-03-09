@@ -1,12 +1,12 @@
 package com.zeroday.auth.web;
 
 import com.zeroday.auth.exception.AuthorNotFoundException;
-import com.zeroday.auth.exception.BookNotFoundException;
+import com.zeroday.auth.exception.ModuleNotFoundException;
 import com.zeroday.auth.model.Author;
-import com.zeroday.auth.model.Book;
+import com.zeroday.auth.model.Module;
 
 
-import com.zeroday.auth.repository.BookRepository;
+import com.zeroday.auth.repository.ModuleRepository;
 import com.zeroday.auth.repository.AuthorshipRepository;
 import com.zeroday.auth.repository.AuthorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +19,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-public class BookController {
+public class ModuleController {
 
     @Autowired
-    BookRepository bookRepository;
+    ModuleRepository moduleRepository;
 
     @Autowired
     AuthorshipRepository authorshipRepository;
@@ -32,8 +32,8 @@ public class BookController {
 
     @RequestMapping({"/list"})
     public String viewHomePage(Model model) {
-        List<Book> listBooks = bookRepository.findAll();
-        model.addAttribute("listBooks", listBooks);
+        List<Module> listModules = moduleRepository.findAll();
+        model.addAttribute("listModules", listModules);
         return "staffWelcome";
     }
 
@@ -44,45 +44,45 @@ public class BookController {
 
     // Delete a Note
     @RequestMapping("/delete/{id}")
-    public String deleteBook(@PathVariable(value = "id") Long bookId, Model model) throws BookNotFoundException {
-        Book book = bookRepository.findById(bookId)
-                .orElseThrow(() -> new BookNotFoundException(bookId));
+    public String deleteModule(@PathVariable(value = "id") Long moduleId, Model model) throws ModuleNotFoundException {
+        Module module = moduleRepository.findById(moduleId)
+                .orElseThrow(() -> new ModuleNotFoundException(moduleId));
 
-        bookRepository.delete(book);
+        moduleRepository.delete(module);
 
         return viewHomePage(model);
     }
     // Create a new Note
     @RequestMapping("/new")
-    public String createBook() {
-        return "bookform";
+    public String createModule() {
+        return "moduleform";
     }
 
     // Create a new Note
-    @PostMapping("/books")
-    public String createNote(@ModelAttribute("book")  Book book, Model model) {
-        bookRepository.save(book);
+    @PostMapping("/modules")
+    public String createNote(@ModelAttribute("module")  Module module, Model model) {
+        moduleRepository.save(module);
         return viewHomePage(model);
     }
 
     // Update a Note
     @RequestMapping(value = "staffWelcome", method = RequestMethod.POST)
-    public String updateNote( @ModelAttribute("book")  Book book, Model model) throws BookNotFoundException {
+    public String updateNote( @ModelAttribute("module")  Module module, Model model) throws ModuleNotFoundException {
 
-        bookRepository.save(book);
+        moduleRepository.save(module);
 
         return viewHomePage(model);
     }
 
     // Get a Single Note
-    @GetMapping("/books/{id}")
-    public String getNoteById(@PathVariable(value = "id") Long bookId, Model model)
-            throws BookNotFoundException, AuthorNotFoundException {
-        Book book = bookRepository.findById(bookId)
-                .orElseThrow(() -> new BookNotFoundException(bookId));
-        model.addAttribute("book", book);
+    @GetMapping("/modules/{id}")
+    public String getNoteById(@PathVariable(value = "id") Long moduleId, Model model)
+            throws ModuleNotFoundException, AuthorNotFoundException {
+        Module module = moduleRepository.findById(moduleId)
+                .orElseThrow(() -> new ModuleNotFoundException(moduleId));
+        model.addAttribute("module", module);
 
-        List<Long> author_ids = authorshipRepository.findAuthorByBookId(book.getId());
+        List<Long> author_ids = authorshipRepository.findAuthorByModuleId(module.getId());
         List<Author> authors = new ArrayList<Author>();
         for (Long author_id : author_ids) {
             Author author = authorRepository.findById(author_id)
