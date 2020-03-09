@@ -62,7 +62,7 @@ public class UserController {
         return "welcome";
     }
 
-    @GetMapping({"/", "/gradeChange"})
+    @GetMapping({"/gradeChange"})
     public String gradeChange(Model model) {
         return "gradeChange";
     }
