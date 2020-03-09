@@ -477,11 +477,11 @@ td, th {
     content: "\e042"
 }
 
-.glyphicon-book:before {
+.glyphicon-module:before {
     content: "\e043"
 }
 
-.glyphicon-bookmark:before {
+.glyphicon-modulemark:before {
     content: "\e044"
 }
 

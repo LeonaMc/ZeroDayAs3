@@ -3,15 +3,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>Books Store Application</title>
+    <title>Modules Store Application</title>
 </head>
 <body>
 <center>
-    <h1>Books Management</h1>
+    <h1>Modules Management</h1>
     <h2>
-        <a href="/new">Add New Book</a>
+        <a href="/new">Add New Module</a>
         &nbsp;&nbsp;&nbsp;
-        <a href="/list">List All Books</a>
+        <a href="/list">List All Modules</a>
 
     </h2>
 </center>
@@ -19,22 +19,22 @@
     <form action="/staffWelcome" method="post">
         <table border="1" cellpadding="5">
             <caption>
-                <h2> Add New Book</h2>
+                <h2> Add New Module</h2>
             </caption>
             <tr>
                 <th>Title: </th>
                 <td>
-                    <input type="text" name="book_name" size="45"
-                           value="<c:out value='${book.book_name}' />"
+                    <input type="text" name="module_name" size="45"
+                           value="<c:out value='${module.module_name}' />"
                     />
                 </td>
             </tr>
 
             <tr>
-                <th>ISBN: </th>
+                <th>School: </th>
                 <td>
-                    <input type="text" name="isbn" size="45"
-                           value="<c:out value='${book.isbn}' />"
+                    <input type="text" name="school" size="45"
+                           value="<c:out value='${module.school}' />"
                     />
                 </td>
             </tr>

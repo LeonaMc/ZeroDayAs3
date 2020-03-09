@@ -13,8 +13,8 @@ import java.util.List;
 @Repository
 public interface AuthorshipRepository extends JpaRepository<Authorship, AuthorshipId> {
 
-    @Query("select a.id_author from Authorship a where a.id_book = ?1")
-    List<Long> findAuthorByBookId(Long book_id) throws AuthorNotFoundException;
+    @Query("select a.id_author from Authorship a where a.id_module = ?1")
+    List<Long> findAuthorByModuleId(Long module_id) throws AuthorNotFoundException;
 
 
 }

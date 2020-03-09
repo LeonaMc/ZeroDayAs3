@@ -8,11 +8,11 @@ import javax.validation.constraints.NotBlank;
 @Table(name = "authorship")
 @IdClass(AuthorshipId.class)
 @NamedQuery(name = "Authorship.findByEmailAddress",
-        query = "select a.id_author from Authorship a where a.id_book = ?1")
+        query = "select a.id_author from Authorship a where a.id_module = ?1")
 public class Authorship {
     @Id
     @NotBlank
-    private Long id_book;
+    private Long id_module;
 
     @Id
     @NotBlank
@@ -22,17 +22,17 @@ public class Authorship {
     public Authorship(){
         super();
     }
-    public Authorship(Long id_book, Long id_author) {
+    public Authorship(Long id_module, Long id_author) {
         super();
-        this.id_book = id_book;
+        this.id_module = id_module;
         this.id_author = id_author;
     }
 
-    public Long getId_book() {
-        return id_book;
+    public Long getId_module() {
+        return id_module;
     }
-    public void setId_book(Long id_book) {
-        this.id_book = id_book;
+    public void setId_module(Long id_module) {
+        this.id_module = id_module;
     }
 
     public Long getId_author() {
