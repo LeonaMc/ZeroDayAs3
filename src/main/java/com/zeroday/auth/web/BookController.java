@@ -75,6 +75,26 @@ public class BookController {
         return viewHomePage(model);
     }
 
+    // Get a Single Note
+    @GetMapping("/books/{id}")
+    public String getNoteById(@PathVariable(value = "id") Long bookId, Model model)
+            throws BookNotFoundException, AuthorNotFoundException {
+        Book book = bookRepository.findById(bookId)
+                .orElseThrow(() -> new BookNotFoundException(bookId));
+        model.addAttribute("book", book);
+
+        List<Long> author_ids = authorshipRepository.findAuthorByBookId(book.getId());
+        List<Author> authors = new ArrayList<Author>();
+        for (Long author_id : author_ids) {
+            Author author = authorRepository.findById(author_id)
+                    .orElseThrow(() -> new AuthorNotFoundException(author_id));
+            authors.add(author);
+        }
+
+        model.addAttribute("authors", authors);
+        return "editform";
+    }
+
     // Create a new Note
     @RequestMapping("/newgrade")
     public String createGrade() {

@@ -1,4 +1,3 @@
-com\zeroday\auth\exception\UserNotFoundException.class
 com\zeroday\auth\service\UserService.class
 com\zeroday\auth\repository\RoleRepository.class
 com\zeroday\auth\model\Book.class
