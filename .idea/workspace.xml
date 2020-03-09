@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7031775-1343-4633-ada7-8433833a97ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/moduleEnrolment.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/viewGrades.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/web/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/web/ModuleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/welcome.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +203,7 @@
       <workItem from="1583787476709" duration="16000" />
       <workItem from="1583788211296" duration="310000" />
       <workItem from="1583788593185" duration="144000" />
-      <workItem from="1583790774012" duration="142000" />
+      <workItem from="1583790774012" duration="294000" />
     </task>
     <servers />
   </component>
