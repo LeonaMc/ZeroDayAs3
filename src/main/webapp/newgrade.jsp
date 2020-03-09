@@ -11,7 +11,7 @@
     <h2>
         <a href="/newgrade">Add New Grade</a>
         &nbsp;&nbsp;&nbsp;
-        <a href="/list">List All Grades</a>
+        <a href="/listgrades">List All Grades</a>
 
     </h2>
 </center>
