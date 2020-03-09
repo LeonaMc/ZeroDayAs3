@@ -82,6 +82,21 @@ public class UserController {
         return "payFees";
     }
 
+    @PostMapping("/payFees")
+    public String registration(@ModelAttribute("payFees") payFees user, BindingResult bindingResult) {
+        if (!user.getPayFees()) {
+            userValidator.validateFees(user, bindingResult);
+
+            if (bindingResult.hasErrors()) {
+                return "payFees";
+            }
+
+            user.setPayFees();
+
+        }
+        return "redirect:/welcome";
+    }
+
     @RequestMapping("/remove/{username}")
     public String deleteUser(@PathVariable(value = "username") String username){
         User user = userService.findByUsername(username);
