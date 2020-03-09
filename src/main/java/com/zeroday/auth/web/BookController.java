@@ -51,7 +51,6 @@ public class BookController {
         bookRepository.delete(book);
 
         return viewHomePage(model);
-
     }
     // Create a new Note
     @RequestMapping("/new")

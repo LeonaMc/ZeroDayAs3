@@ -65,7 +65,7 @@ public class UserController {
     }
 
     @RequestMapping("/delete/{username}")
-    public String deleteBook(@PathVariable(value = "username") String username, Model model){
+    public String deleteUser(@PathVariable(value = "username") String username){
         User user = userService.findByUsername(username);
         userService.delete(user);
 
