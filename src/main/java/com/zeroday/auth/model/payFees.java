@@ -22,7 +22,7 @@ public class payFees {
         return payFees;
     }
 
-    public void setPayFees(String cardNumber) {
+    public void setPayFees() {
         this.payFees = (!payFees);
     }
 
