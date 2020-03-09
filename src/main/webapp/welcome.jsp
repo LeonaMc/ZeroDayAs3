@@ -17,7 +17,10 @@
         </form>
 
         <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
-        <h3><a href="/remove/${pageContext.request.userPrincipal.name}">Cancel Registration</a></h3>
+        <h3><a href="/payFees">Cancel Registration</a></h3>
+        <h3><a href="/moduleEnrolment">Cancel Registration</a></h3>
+        <h3><a href="/viewGrades">Cancel Registration</a></h3>
+
     </c:if>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
