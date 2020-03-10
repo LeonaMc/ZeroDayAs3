@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="b7031775-1343-4633-ada7-8433833a97ac" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/web/ModuleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/web/ModuleController.java" afterDir="false" />
+=======
     <list default="true" id="c9c57f43-18b9-4b4d-a1bc-29d21e94524b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/moduleEnrolment.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/moduleEnrolment.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/moduleEnrolmentActive.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/moduleEnrolmentActive.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/springboot-registration-login-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/springboot-registration-login-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/springboot-registration-login-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/springboot-registration-login-1.0-SNAPSHOT.jar.original" afterDir="false" />
+>>>>>>> 3833846d00a4810a6b6d978baa918cd34f67d186
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
