@@ -76,9 +76,9 @@ public class UserController {
     }
 
     @GetMapping({"/payFees"})
-    public String payFees(Model model)
+    public String payFees(@ModelAttribute("payFees") payFees user, Model model)
     {
-        if (!model.containsAttribute("payFees")) {
+        if (!user.getPayFees()) {
             model.addAttribute("payFees", new payFees());
             return "payFees";
         }else{

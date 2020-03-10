@@ -8,7 +8,7 @@ import java.util.Set;
 public class payFees {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Boolean payFees = false;
+    private boolean payFees = false;
 
     private String cardNumber;
 
@@ -18,12 +18,12 @@ public class payFees {
 
     private String cardName;
 
-    public Boolean getPayFees() {
+    public boolean getPayFees() {
         return payFees;
     }
 
     public void setPayFees() {
-        this.payFees = true;
+        payFees = true;
     }
 
     public String getCardNumber() {
