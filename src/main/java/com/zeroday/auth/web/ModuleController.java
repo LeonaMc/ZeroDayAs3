@@ -136,4 +136,10 @@ public class ModuleController {
         model.addAttribute("listEnrolledModules", moduleRepository.findAll());
         return "moduleEnrolment";
     }
+
+    @RequestMapping(value = "/newgrade", method = RequestMethod.GET)
+    public String enterGrade(Model model) {
+        model.addAttribute("newgrade", new Grade());
+        return "newgrade";
+    }
 }

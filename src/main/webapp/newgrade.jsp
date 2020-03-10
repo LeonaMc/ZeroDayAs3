@@ -1,13 +1,20 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<html>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Add new Grade Entry</title>
+    <meta charset="utf-8">
+    <title>Enter a grade</title>
+
+    <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
 </head>
 <body>
 <center>
-    <h1>Grade Change</h1>
+    <h1>Grade Entry</h1>
     <h2>
         <a href="/newgrade">Add New Grade</a>
         &nbsp;&nbsp;&nbsp;
@@ -15,64 +22,46 @@
 
     </h2>
 </center>
-<div align="center">
-    <form action="/gradeChange" method="post">
-        <table border="1" cellpadding="5">
-            <caption>
-                <h2> Add New Grade</h2>
-            </caption>
-            <tr>
-                <th>Student ID: </th>
-                <td>
-                    <input type="text" name="studentID" size="10"
-                           value="<c:out value='${grade.studentID}' />"
-                    />
-                </td>
-            </tr>
 
-            <tr>
-                <th>Student Name: </th>
-                <td>
-                    <input type="text" name="studentName" size="45"
-                           value="<c:out value='${grade.studentName}' />"
-                    />
-                </td>
-            </tr>
+<div class="container">
+    <form:form method="POST" modelAttribute="newgrade" class="form-signin">
+    <h2 class="form-signin-heading">Input grade details</h2>
 
-            <tr>
-                <th>Module: </th>
-                <td>
-                    <input type="text" name="module" size="10"
-                           value="<c:out value='${grade.module}' />"
-                    />
-                </td>
-            </tr>
+    <spring:bind path="studentID">
+    <div class="form-group ${status.error ? 'has-error' : ''}">
+        <form:input type="text" path="studentID" class="form-control" placeholder="Student ID"
+                    autofocus="true"></form:input>
+        <form:errors path="studentID"></form:errors>
+    </div>
+    </spring:bind>
 
-            <tr>
-                <th>Grade: </th>
-                <td>
-                    <input type="text" name="grade" size="2"
-                           value="<c:out value='${grade.grade}' />"
-                    />
-                </td>
-            </tr>
+    <spring:bind path="studentName">
+    <div class="form-group ${status.error ? 'has-error' : ''}">
+        <form:input type="text" path="studentName" class="form-control" placeholder="Student Name"></form:input>
+        <form:errors path="studentName"></form:errors>
+    </div>
+    </spring:bind>
 
-            <tr>
-                <td colspan="2" align="center">
-                    <input type="submit" value="Save" />
-                </td>
-            </tr>
-        </table>
+    <spring:bind path="module">
+    <div class="form-group ${status.error ? 'has-error' : ''}">
+        <form:input type="text" path="module" class="form-control" placeholder="Module Name"></form:input>
+        <form:errors path="module"></form:errors>
+    </div>
+    </spring:bind>
 
+    <spring:bind path="grade">
+    <div class="form-group ${status.error ? 'has-error' : ''}">
+        <form:input type="text" path="grade" class="form-control" placeholder="Student's Grade"></form:input>
+        <form:errors path="grade"></form:errors>
+    </div>
+    </spring:bind>
 
-        Choose your favorite subject:
-        <button name="subject" type="submit" value="fav_HTML">HTML</button>
-        <button name="subject" type="submit" value="fav_CSS">CSS</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
 
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-
-
-    </form>
+    </form:form>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="${contextPath}/resources/js/bootstrap.min.js"></script>
 </body>
 </html>

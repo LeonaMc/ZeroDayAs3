@@ -2,6 +2,7 @@ package com.zeroday.auth.validator;
 
 import com.zeroday.auth.model.User;
 import com.zeroday.auth.model.payFees;
+import com.zeroday.auth.model.Grade;
 import com.zeroday.auth.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -85,5 +86,30 @@ public class UserValidator implements Validator {
 //            errors.rejectValue("expireDate", "Size.payFees.expireDate");
 //        }
 
+    }
+
+    public void validateGrades(Object o, Errors errors){
+        Grade thisGrade = (Grade) o;
+
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "studentID", "NotEmpty");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "studentName", "NotEmpty");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "module", "NotEmpty");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "grade", "NotEmpty");
+
+        if(thisGrade.getStudentID().getClass().toString()!="Long"){
+            errors.rejectValue("studentID", "NoLetters.newgrade.studentID");
+        }
+        if(!thisGrade.getStudentName().contains(" ")) {
+            errors.rejectValue("studentName", "Fullname.newgrade.studentName");
+        }
+        if(thisGrade.getModule().length()>45){
+            errors.rejectValue("module", "Size.newgrade.modul");
+        }
+        if(thisGrade.getGrade().getClass().toString()!="Long"){
+            errors.rejectValue("grade", "NoLetters.newgrade.grade");
+        }
+        if(thisGrade.getGrade()>100){
+            errors.rejectValue("grade", "Size.newgrade.grade");
+        }
     }
 }
