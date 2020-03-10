@@ -106,3 +106,5 @@ Ciarán:
        Grade entry form and function for staff to list all grades.
 
        Model and repository related to grade objects.
+
+       Students can view their own grades.
