@@ -63,7 +63,7 @@ Leona McNulty
 # Team Members:
 Ciarán Conlon, Anna Davison
 
-# Diary:
+# Diary of Tasks performed:
 Leona: 
 
        
@@ -89,6 +89,7 @@ Leona:
 Anna:  
        
        Fix 'save' button when adding a new module
+       
        Edit page doesn't save
        
        No registration functionality is required for staff.    The assumption is
