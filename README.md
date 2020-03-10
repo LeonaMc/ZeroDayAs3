@@ -9,6 +9,18 @@ Leona McNulty
 Anna Davison
 Ciarán Conlon
 
+# Database creation:
+create database library;
+create user 'root'@'localhost' identified by 'root';
+grant all privileges on *.* to 'root'@'localhost';
+
+# How to run:
+Ensure database, user and password have all been created in MySQL Command Line Client
+Go to the folder where the project is stored and type the following to run the App:
+mvn spring-boot:run
+Go to web browser and type the following to direct you to the login page of the App:
+localhost:8080/login
+
 # Project Details
 
 A web application that can be used by the students to enroll to modules, visualize their grades, and also visualize statistics
@@ -46,11 +58,6 @@ Staff can modify module info. Staff are allowed to modify information about modu
 
 Staff can input grades. Staff are allowed to input grades for students when a module terminates.
 
-# SQL Commands:
-create database library;
-create user 'root'@'localhost' identified by 'root';
-grant all privileges on *.* to 'root'@'localhost';
-
 # Group Leader:
 Leona McNulty
 # Team Members:
@@ -82,6 +89,7 @@ Leona:
 Anna:  
 
        Fix 'save' button when adding a new module
+
        Edit page doesn't save
 
        No registration functionality is required for staff.    The assumption is
@@ -96,5 +104,5 @@ Ciarán:
        Staff can modify module info. Staff are allowed to modify information about modules.
 
        Grade entry form and function for staff to list all grades.
-       
+
        Model and repository related to grade objects.
