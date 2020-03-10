@@ -12,11 +12,11 @@ public class Grade {
     @NotBlank
     private String module;
     @NotBlank
-    private String grade;
+    private Long grade;
     public Grade(){
         super();
     }
-    public Grade(Long studentID, String studentName,  String module, String grade) {
+    public Grade(Long studentID, String studentName,  String module, Long grade) {
         super();
         this.studentID = studentID;
         this.studentName = studentName;
@@ -33,6 +33,6 @@ public class Grade {
     public String getModule() { return module; }
     public void setModule(String module) { this.module = module; }
 
-    public String getGrade() { return grade; }
-    public void setGrade(String grade) { this.grade = grade; }
+    public Long getGrade() { return grade; }
+    public void setGrade(Long grade) { this.grade = grade; }
 }
