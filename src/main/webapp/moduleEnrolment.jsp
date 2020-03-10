@@ -12,7 +12,7 @@
     <h2>
         <a href="/newEnrolModule">Add New Book</a> &nbsp;&nbsp;&nbsp;
         <a href="/listAllEnroledModules">View Available Modules</a>
-        <a href="listActiveEnrolledModules">View Active Modules</a>
+        <a href="/listActiveEnrolledModules">View Active Modules</a>
     </h2>
 
 
