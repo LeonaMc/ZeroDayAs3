@@ -84,17 +84,20 @@ public class UserController {
 
     @PostMapping("/payFees")
     public String payFees(@ModelAttribute("payFees") payFees user, BindingResult bindingResult) {
+        String direction=null;
         if (!user.getPayFees()) {
             userValidator.validateFees(user, bindingResult);
 
             if (bindingResult.hasErrors()) {
-                return "payFees";
+                direction="payFees";
             }
 
             user.setPayFees();
 
+        }else{
+            direction="redirect:/welcome";
         }
-        return "redirect:/welcome";
+        return direction;
     }
 
     @RequestMapping("/remove/{username}")

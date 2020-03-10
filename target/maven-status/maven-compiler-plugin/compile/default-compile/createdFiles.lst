@@ -1,40 +1,22 @@
 com\zeroday\auth\web\ModuleController.class
 com\zeroday\auth\service\UserService.class
 com\zeroday\auth\repository\RoleRepository.class
-<<<<<<< HEAD
 com\zeroday\auth\model\Role.class
 com\zeroday\auth\service\SecurityServiceImpl.class
 com\zeroday\auth\WebApplication.class
 com\zeroday\auth\service\SecurityService.class
 com\zeroday\auth\repository\UserRepository.class
 com\zeroday\auth\model\User.class
-com\zeroday\auth\model\Author.class
+com\zeroday\auth\model\payFees.class
 com\zeroday\auth\validator\UserValidator.class
-com\zeroday\auth\repository\AuthorshipRepository.class
 com\zeroday\auth\exception\ModuleNotFoundException.class
 com\zeroday\auth\service\UserServiceImpl.class
 com\zeroday\auth\repository\GradeRepository.class
-com\zeroday\auth\repository\AuthorRepository.class
 com\zeroday\auth\repository\ModuleRepository.class
 com\zeroday\auth\WebSecurityConfig.class
 com\zeroday\auth\service\UserDetailsServiceImpl.class
-com\zeroday\auth\model\Authorship.class
-=======
-com\zeroday\auth\repository\ModuleRepository.class
-com\zeroday\auth\model\Role.class
-com\zeroday\auth\service\SecurityServiceImpl.class
-com\zeroday\auth\WebApplication.class
-com\zeroday\auth\WebSecurityConfig.class
-com\zeroday\auth\service\UserDetailsServiceImpl.class
->>>>>>> 8ffc4692b7315c48730127fb9da38515886c72da
 com\zeroday\auth\model\Module.class
 com\zeroday\auth\web\UserController.class
 com\zeroday\auth\model\Student.class
 com\zeroday\auth\exception\AuthorNotFoundException.class
-<<<<<<< HEAD
-com\zeroday\auth\model\AuthorshipId.class
-=======
 com\zeroday\auth\model\Grade.class
-com\zeroday\auth\model\payFees.class
-com\zeroday\auth\validator\UserValidator.class
->>>>>>> 8ffc4692b7315c48730127fb9da38515886c72da
