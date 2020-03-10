@@ -17,7 +17,7 @@
 	</center>
 
 	<div align="center">
-		<table  id ="customers" border="1" cellpadding="5">
+		<table border="1" cellpadding="5">
 			<caption>
 				<h2>List of active Modules</h2>
 			</caption>

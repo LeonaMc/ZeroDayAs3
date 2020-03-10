@@ -18,7 +18,7 @@
 </center>
 <div align="center">
     <form action="/staffWelcome" method="post">
-        <table id ="customers" border="1" cellpadding="5">
+        <table border="1" cellpadding="5">
             <caption>
                 <h2>
                     Edit Module
