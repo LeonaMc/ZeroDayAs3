@@ -16,6 +16,8 @@ import com.zeroday.auth.exception.AuthorNotFoundException;
 import com.zeroday.auth.exception.ModuleNotFoundException;
 import com.zeroday.auth.model.Module;
 import com.zeroday.auth.repository.ModuleRepository;
+import com.zeroday.auth.model.Grade;
+import com.zeroday.auth.repository.GradeRepository;
 
 @Controller
 public class ModuleController {
@@ -23,6 +25,10 @@ public class ModuleController {
     @Autowired
     ModuleRepository moduleRepository;
 
+    @Autowired
+    GradeRepository gradeRepository;
+
+    
     @RequestMapping({ "/list" })
     public String viewHomePage(Model model) {
         List<Module> listModules = moduleRepository.findAll();
@@ -79,6 +85,12 @@ public class ModuleController {
     @RequestMapping("/newgrade")
     public String createGrade() {
         return "newgrade";
+    }
+
+    @PostMapping("/gradeChange")
+    public String createGrade(@ModelAttribute("grade")  Grade grade, Model model) {
+        gradeRepository.save(grade);
+        return viewHomePage(model);
     }
 
     // Create a new Note
