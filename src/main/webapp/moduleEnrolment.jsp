@@ -4,6 +4,7 @@
 
 <html>
 <head>
+    <link rel="stylesheet" href="${contextPath}/resources/css/mainstyle.css">
     <title>Module Enrolment</title>
 </head>
 <body>

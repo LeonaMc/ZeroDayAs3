@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
+    <link rel="stylesheet" href="${contextPath}/resources/css/common.css">
     <title>Modules Store Application</title>
 </head>
 <body>
@@ -63,11 +64,6 @@
                 </td>
             </tr>
         </table>
-
-
-            Choose your favorite subject:
-            <button name="subject" type="submit" value="fav_HTML">HTML</button>
-            <button name="subject" type="submit" value="fav_CSS">CSS</button>
 
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
