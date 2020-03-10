@@ -25,6 +25,8 @@
             <th>ID</th>
             <th>Module</th>
             <th>School</th>
+            <th>Module Coordinator</th>
+            <th>Module Topic</th>
             <th>Actions</th>
         </tr>
         <c:forEach var="module" items="${listModules}">
@@ -33,6 +35,8 @@
                 <td><c:out value="${module.module_name}" /></td>
 
                 <td><c:out value="${module.school}" /></td>
+                <td><c:out value="${module.module_coord}" /></td>
+                <td><c:out value="${module.module_topic}" /></td>
                 <td>
                     <a href="/modules/${module.id}"/>Edit</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
