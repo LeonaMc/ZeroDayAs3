@@ -72,7 +72,7 @@ public class UserValidator implements Validator {
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "cardNumber", "NotEmpty");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "securityCode", "NotEmpty");
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "expireDate", "NotEmpty");
+        //ValidationUtils.rejectIfEmptyOrWhitespace(errors, "expireDate", "NotEmpty");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "cardName", "NotEmpty");
 
         if (user.getCardNumber().length() != 16) {
@@ -81,9 +81,9 @@ public class UserValidator implements Validator {
         if (user.getSecurityCode().length() != 3) {
             errors.rejectValue("securityCode", "Size.payFees.securityCode");
         }
-        if (user.getExpireDate().length() != 7) {
-            errors.rejectValue("expireDate", "Size.payFees.expireDate");
-        }
+//        if (user.getExpireDate().length() != 7) {
+//            errors.rejectValue("expireDate", "Size.payFees.expireDate");
+//        }
 
     }
 }
