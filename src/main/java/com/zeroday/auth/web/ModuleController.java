@@ -28,7 +28,7 @@ public class ModuleController {
     @Autowired
     GradeRepository gradeRepository;
 
-    
+
     @RequestMapping({ "/list" })
     public String viewHomePage(Model model) {
         List<Module> listModules = moduleRepository.findAll();

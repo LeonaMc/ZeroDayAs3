@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="b7031775-1343-4633-ada7-8433833a97ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/web/ModuleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/web/ModuleController.java" afterDir="false" />
+=======
+    <list default="true" id="c9c57f43-18b9-4b4d-a1bc-29d21e94524b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/moduleEnrolment.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/moduleEnrolment.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springboot-registration-login-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/springboot-registration-login-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springboot-registration-login-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/springboot-registration-login-1.0-SNAPSHOT.jar.original" afterDir="false" />
+>>>>>>> 3833846d00a4810a6b6d978baa918cd34f67d186
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +25,11 @@
       <MavenGeneralSettings>
         <option name="mavenHome" value="C:/ProgramData/chocolatey/lib/maven/apache-maven-3.6.3" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenRunner">
@@ -51,6 +64,34 @@
       <command value="mvn spring-boot:run" />
     </option>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.zeroday.auth.WebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="ZeroDayAs1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zeroday.auth.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zeroday.auth.WebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.WebApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="ServiceViewManager">
     <option name="showServicesTree" value="false" />
   </component>
@@ -59,13 +100,14 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="238a998f-8484-40bc-91de-5e383191e06b" name="Default Changelist" comment="" />
+      <changelist id="c9c57f43-18b9-4b4d-a1bc-29d21e94524b" name="Default Changelist" comment="" />
       <created>1583864882806</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583864882806</updated>
       <workItem from="1583864884395" duration="359000" />
       <workItem from="1583866227166" duration="28000" />
+      <workItem from="1583866979549" duration="370000" />
     </task>
     <servers />
   </component>
@@ -73,10 +115,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583865195826">
+    <state x="0" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583867001964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="0" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583865195826" />
+    <state x="0" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583867001964" />
     <state width="1237" height="96" key="GridCell.Tab.0.bottom" timestamp="1583865941775">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
