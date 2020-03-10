@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <link rel="stylesheet" href="/resources/css/common.css">
+    <link rel="stylesheet" href="${contextPath}/resources/css/common.css">
     <title>Modules Store Application</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
 </center>
 <div align="center">
     <form action="/staffWelcome" method="post">
-        <table border="1" cellpadding="5">
+        <table  id ="customers"  border="1" cellpadding="5">
             <caption>
                 <h2> Add New Module</h2>
             </caption>

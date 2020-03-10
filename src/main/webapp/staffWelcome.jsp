@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
+    <link rel="stylesheet" href="${contextPath}/resources/css/common.css">
     <title>Staff Welcome Page</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
     </h3>
 </center>
 <div align="center">
-    <table border="1" cellpadding="5">
+    <table  id ="customers" border="1" cellpadding="5">
         <caption><h2>List of Modules</h2></caption>
         <tr>
             <th>ID</th>
