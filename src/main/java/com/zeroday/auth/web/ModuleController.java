@@ -2,21 +2,17 @@ package com.zeroday.auth.web;
 
 import com.zeroday.auth.exception.AuthorNotFoundException;
 import com.zeroday.auth.exception.ModuleNotFoundException;
-import com.zeroday.auth.model.Author;
 import com.zeroday.auth.model.Module;
 import com.zeroday.auth.model.Grade;
 
 import com.zeroday.auth.repository.GradeRepository;
 import com.zeroday.auth.repository.ModuleRepository;
-import com.zeroday.auth.repository.AuthorshipRepository;
-import com.zeroday.auth.repository.AuthorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
 
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -25,14 +21,9 @@ public class ModuleController {
     @Autowired
     ModuleRepository moduleRepository;
 
+
     @Autowired
     GradeRepository gradeRepository;
-
-    @Autowired
-    AuthorshipRepository authorshipRepository;
-
-    @Autowired
-    AuthorRepository authorRepository;
 
     @RequestMapping({"/list"})
     public String viewHomePage(Model model) {
@@ -86,15 +77,6 @@ public class ModuleController {
                 .orElseThrow(() -> new ModuleNotFoundException(moduleId));
         model.addAttribute("module", module);
 
-        List<Long> author_ids = authorshipRepository.findAuthorByModuleId(module.getId());
-        List<Author> authors = new ArrayList<Author>();
-        for (Long author_id : author_ids) {
-            Author author = authorRepository.findById(author_id)
-                    .orElseThrow(() -> new AuthorNotFoundException(author_id));
-            authors.add(author);
-        }
-
-        model.addAttribute("authors", authors);
         return "editform";
     }
 
@@ -114,6 +96,21 @@ public class ModuleController {
     @RequestMapping("/listgrades")
     public String listGrades() {
         return "listgrades";
+    }
+
+    ///////////
+
+    // Create a new Note
+    @RequestMapping("/newEnrolModule")
+    public String enrolModule() {
+        return "moduleEnrolment";
+    }
+
+    @RequestMapping({"/listAllEnroledModules"})
+    public String listAllEnroledModules(Model model) {
+        List<Module> listModules = moduleRepository.findAll();
+        model.addAttribute("listModules", listModules);
+        return "moduleEnrolment";
     }
 
 }

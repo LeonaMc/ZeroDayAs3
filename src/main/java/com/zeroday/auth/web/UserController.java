@@ -83,7 +83,7 @@ public class UserController {
     }
 
     @PostMapping("/payFees")
-    public String registration(@ModelAttribute("payFees") payFees user, BindingResult bindingResult) {
+    public String payFees(@ModelAttribute("payFees") payFees user, BindingResult bindingResult) {
         if (!user.getPayFees()) {
             userValidator.validateFees(user, bindingResult);
 

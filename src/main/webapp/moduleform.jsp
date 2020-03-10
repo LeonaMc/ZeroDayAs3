@@ -22,7 +22,7 @@
                 <h2> Add New Module</h2>
             </caption>
             <tr>
-                <th>Title: </th>
+                <th>Module Name: </th>
                 <td>
                     <input type="text" name="module_name" size="45"
                            value="<c:out value='${module.module_name}' />"
@@ -38,6 +38,25 @@
                     />
                 </td>
             </tr>
+
+            <tr>
+                <th>Module Coordinator: </th>
+                <td>
+                    <input type="text" name="module_coord" size="45"
+                           value="<c:out value='${module.module_coord}' />"
+                    />
+                </td>
+            </tr>
+
+            <tr>
+                <th>Module Topic: </th>
+                <td>
+                    <input type="text" name="module_topic" size="45"
+                           value="<c:out value='${module.module_topic}' />"
+                    />
+                </td>
+            </tr>
+
             <tr>
                 <td colspan="2" align="center">
                     <input type="submit" value="Save" />
