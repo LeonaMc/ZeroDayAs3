@@ -59,7 +59,7 @@ Ciarán Conlon, Anna Davison
 # Diary:
 Leona: 
 
-       Creation of login and registration pages. 
+       Creation and styling of login and registration pages. 
        Allow student to logout.
        Allow user to create username and password that can be used for future logins.
        Avoid duplicate username registration. Produce error messages when registration is 
@@ -73,7 +73,7 @@ Leona:
        available modules and view a list of modules that they are currently enroled in. 
        Creation of Staff Functionality such that the staff can add new module, view all modules
        and edit pre-existing modules.
-       Refactoring & Debugging
+       Refactoring & Debugging.
 
 Anna:  
        
@@ -83,6 +83,7 @@ Anna:
        Allow students to cancel their registration.
        Create a page for students to pay fees. 
        Create error messages when user input for payment of fees is invalid.
+       Debugging.
 
 
 Ciarán:
