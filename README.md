@@ -94,7 +94,7 @@ Ciarán:
 
 
 
-# Project Requirements
+# Project Details
 
 A web application that can be used by the students to enroll to modules, visualize their grades, and also visualize statistics
 to build a web application that can be used by students to search for information about modules.
