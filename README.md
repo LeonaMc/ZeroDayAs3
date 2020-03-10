@@ -7,7 +7,7 @@ https://github.com/LeonaMc/ZD
 # Collaborators
 Leona McNulty 
 Anna Davison 
-Ciar√°n Conlon
+Ciar·n Conlon
 
 # Project Details
 
@@ -54,7 +54,7 @@ grant all privileges on *.* to 'root'@'localhost';
 # Group Leader:
 Leona McNulty
 # Team Members:
-Ciar√°n Conlon, Anna Davison
+Ciar·n Conlon, Anna Davison
 
 # Diary:
 Leona: Grade Page creation and directing from welcome staff to grade page
@@ -70,11 +70,23 @@ Leona: Grade Page creation and directing from welcome staff to grade page
        -- See UserValidator.java for more details. Country of origin selector
        implemented.
 
+       Refactoring code to have names which are applicable to our application.
+
+       Grade Page creation and directing from welcome staff to grade page.
+
 Anna:  Fix 'save' button when adding a new module
        
        Edit page doesn't save
        
-       No registration functionality is required for staff. The assumption is
+       No registration functionality is required for staff.    The assumption is
        that staff is already registered in the system and does not need to do so.
 
-Ciar√°n & Leona: Login and Logout: Students can login and logout from the WebApp.
+       Students can cancel their registration.
+
+       Payment: Students have to pay their fees for the current academic year in order to be able to enrol in a module.
+
+
+Ciar·n: Staff can modify module info. Staff are allowed to modify information about modules.
+
+
+Ciar·n & Leona: Login and Logout: Students can login and logout from the WebApp.
