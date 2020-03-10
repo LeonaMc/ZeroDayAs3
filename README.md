@@ -69,10 +69,10 @@ Ciarán:
 
 #### Login Page
 
-![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/src/imgs/1Login.PNG)
+![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/1Login.PNG)
 #### Registration Page
 
-![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/src/imgs/2Registration.PNG)
+![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/2Registration.PNG)
 
 # Project Details
 
