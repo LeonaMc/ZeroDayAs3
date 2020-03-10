@@ -86,7 +86,7 @@ public class ModuleController {
         return "newgrade";
     }
 
-    @PostMapping("/grades")
+    @PostMapping("/gradeChange")
     public String createGrade(@ModelAttribute("grade")  Grade grade, Model model) {
         gradeRepository.save(grade);
         return viewHomePage(model);
