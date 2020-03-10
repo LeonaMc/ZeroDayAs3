@@ -75,13 +75,13 @@ public class UserValidator implements Validator {
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "expireDate", "NotEmpty");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "cardName", "NotEmpty");
 
-        if (user.getCardNumber().length() < 16 || user.getCardNumber().length() > 16) {
+        if (user.getCardNumber().length() != 16) {
             errors.rejectValue("cardNumber", "Size.payFees.cardNumber");
         }
-        if (user.getSecurityCode().length() < 3 || user.getSecurityCode().length()  > 3) {
+        if (user.getSecurityCode().length() != 3) {
             errors.rejectValue("securityCode", "Size.payFees.securityCode");
         }
-        if (user.getExpireDate().length() < 7 || user.getSecurityCode().length()  > 7) {
+        if (user.getExpireDate().length() != 7) {
             errors.rejectValue("expireDate", "Size.payFees.expireDate");
         }
 
