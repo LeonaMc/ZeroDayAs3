@@ -1,46 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7031775-1343-4633-ada7-8433833a97ac" name="Default Changelist" comment="">
+    <list default="true" id="238a998f-8484-40bc-91de-5e383191e06b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/moduleEnrolmentActive.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/web/ModuleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/web/ModuleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zeroday/auth/model/payFees.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zeroday/auth/model/payFees.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/validation.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/validation.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/model/Author.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/model/Authorship.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/model/AuthorshipId.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/repository/AuthorRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/repository/AuthorshipRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/web/ModuleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/web/ModuleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/model/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/model/Module.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/model/payFees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/model/payFees.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/repository/ModuleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zeroday/auth/repository/ModuleRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/moduleEnrolment.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/moduleEnrolment.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zeroday/auth/model/Author.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zeroday/auth/model/Authorship.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zeroday/auth/model/AuthorshipId.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zeroday/auth/model/payFees.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zeroday/auth/model/payFees.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zeroday/auth/repository/AuthorRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zeroday/auth/repository/AuthorshipRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zeroday/auth/web/ModuleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zeroday/auth/web/ModuleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springboot-registration-login-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/springboot-registration-login-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springboot-registration-login-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/springboot-registration-login-1.0-SNAPSHOT.jar.original" afterDir="false" />
->>>>>>> 8ffc4692b7315c48730127fb9da38515886c72da
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="Interface" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,17 +24,12 @@
         <option name="mavenHome" value="C:/ProgramData/chocolatey/lib/maven/apache-maven-3.6.3" />
       </MavenGeneralSettings>
     </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="MavenRunner">
     <option name="delegateBuildToMaven" value="true" />
     <option name="jreName" value="11" />
   </component>
-  <component name="ProjectId" id="1YdFanQ3R1ozdUnrwlVHRvMvk3U" />
+  <component name="ProjectId" id="1YwsExVJ1u9VUqHwk05d2FV7X3m" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -70,310 +38,35 @@
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JSP" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Owner\Downloads\ZeroDayAs1\src\main\webapp" />
-      <recent name="C:\Users\Owner\Downloads\ZeroDayAs1\src\main\resources\static\css" />
-      <recent name="C:\Users\Owner\Downloads\springboot-registration-login\src\main\webapp" />
-      <recent name="C:\Users\Owner\Downloads\springboot-registration-login\src\main\webapp\resources" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Owner\Downloads\ZeroDayAs1\src\main\webapp" />
+      <recent name="C:\Users\Owner\IdeaProjects\ZeroDay\src\main\webapp" />
     </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="mvn spring-boot" />
-      <command value="mvn spring-boot:run" />
-    </option>
-  </component>
-  <component name="RunManager" selected="Spring Boot.WebApplication (1)">
-    <configuration name="WebApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="ZeroDayAs1" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zeroday.auth.WebApplication" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="ZeroDayAs1" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hellokoding.auth.WebApplication" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Spring Boot.WebApplication" />
-      <item itemvalue="Spring Boot.WebApplication (1)" />
-    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b7031775-1343-4633-ada7-8433833a97ac" name="Default Changelist" comment="" />
-      <created>1583264629048</created>
+      <changelist id="238a998f-8484-40bc-91de-5e383191e06b" name="Default Changelist" comment="" />
+      <created>1583864882806</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1583264629048</updated>
-      <workItem from="1583264634882" duration="2263000" />
-      <workItem from="1583266909550" duration="2971000" />
-      <workItem from="1583270148160" duration="219000" />
-      <workItem from="1583270376821" duration="694000" />
-      <workItem from="1583271085437" duration="108000" />
-      <workItem from="1583271199950" duration="331000" />
-      <workItem from="1583271538699" duration="204000" />
-      <workItem from="1583271749376" duration="95000" />
-      <workItem from="1583271851072" duration="751000" />
-      <workItem from="1583273231820" duration="1485000" />
-      <workItem from="1583274728087" duration="446000" />
-      <workItem from="1583275183312" duration="103000" />
-      <workItem from="1583275292607" duration="2509000" />
-      <workItem from="1583277964672" duration="148000" />
-      <workItem from="1583278135569" duration="243000" />
-      <workItem from="1583278395840" duration="245000" />
-      <workItem from="1583278650141" duration="176000" />
-      <workItem from="1583278834219" duration="45000" />
-      <workItem from="1583278886901" duration="81000" />
-      <workItem from="1583278978254" duration="99000" />
-      <workItem from="1583279090963" duration="498000" />
-      <workItem from="1583279598498" duration="69000" />
-      <workItem from="1583279673461" duration="88000" />
-      <workItem from="1583279777869" duration="623000" />
-      <workItem from="1583280409439" duration="47000" />
-      <workItem from="1583280468812" duration="836000" />
-      <workItem from="1583281318821" duration="532000" />
-      <workItem from="1583281862838" duration="306000" />
-      <workItem from="1583282202190" duration="2043000" />
-      <workItem from="1583286493280" duration="274000" />
-      <workItem from="1583286779793" duration="480000" />
-      <workItem from="1583287272571" duration="95000" />
-      <workItem from="1583287380524" duration="85000" />
-      <workItem from="1583287778263" duration="103000" />
-      <workItem from="1583287888214" duration="884000" />
-      <workItem from="1583288791982" duration="108000" />
-      <workItem from="1583288914025" duration="178000" />
-      <workItem from="1583289239808" duration="478000" />
-      <workItem from="1583289739471" duration="583000" />
-      <workItem from="1583290395658" duration="317000" />
-      <workItem from="1583290754006" duration="106000" />
-      <workItem from="1583290875202" duration="163000" />
-      <workItem from="1583291046770" duration="161000" />
-      <workItem from="1583291216442" duration="285000" />
-      <workItem from="1583291510028" duration="144000" />
-      <workItem from="1583291681948" duration="120000" />
-      <workItem from="1583291816385" duration="73000" />
-      <workItem from="1583291897891" duration="250000" />
-      <workItem from="1583292156770" duration="431000" />
-      <workItem from="1583292600906" duration="202000" />
-      <workItem from="1583292863264" duration="277000" />
-      <workItem from="1583293157959" duration="133000" />
-      <workItem from="1583293300570" duration="151000" />
-      <workItem from="1583293468672" duration="400000" />
-      <workItem from="1583293879611" duration="302000" />
-      <workItem from="1583294200241" duration="72000" />
-      <workItem from="1583294281341" duration="177000" />
-      <workItem from="1583294469223" duration="229000" />
-      <workItem from="1583294714488" duration="144000" />
-      <workItem from="1583294872746" duration="1182000" />
-      <workItem from="1583296107150" duration="97000" />
-      <workItem from="1583296221402" duration="502000" />
-      <workItem from="1583296741020" duration="168000" />
-      <workItem from="1583297179711" duration="824000" />
-      <workItem from="1583298016686" duration="776000" />
-      <workItem from="1583298808675" duration="155000" />
-      <workItem from="1583298972565" duration="680000" />
-      <workItem from="1583300121995" duration="801000" />
-      <workItem from="1583300956397" duration="673000" />
-      <workItem from="1583301653424" duration="407000" />
-      <workItem from="1583302074084" duration="543000" />
-      <workItem from="1583302631512" duration="180000" />
-      <workItem from="1583302824668" duration="296000" />
-      <workItem from="1583303131750" duration="274000" />
-      <workItem from="1583596730042" duration="262000" />
-      <workItem from="1583597009401" duration="208000" />
-      <workItem from="1583597234416" duration="88000" />
-      <workItem from="1583597902223" duration="821000" />
-      <workItem from="1583599278472" duration="949000" />
-      <workItem from="1583600250902" duration="68000" />
-      <workItem from="1583600334326" duration="168000" />
-      <workItem from="1583601577925" duration="295000" />
-      <workItem from="1583601892264" duration="213000" />
-      <workItem from="1583602152659" duration="320000" />
-      <workItem from="1583602491852" duration="179000" />
-      <workItem from="1583602686390" duration="710000" />
-      <workItem from="1583603417716" duration="1680000" />
-      <workItem from="1583629018311" duration="1441000" />
-      <workItem from="1583731177155" duration="347000" />
-      <workItem from="1583731543571" duration="464000" />
-      <workItem from="1583732024201" duration="132000" />
-      <workItem from="1583732168502" duration="58000" />
-      <workItem from="1583732240555" duration="44000" />
-      <workItem from="1583732300497" duration="353000" />
-      <workItem from="1583745355605" duration="3665000" />
-      <workItem from="1583749063897" duration="2604000" />
-      <workItem from="1583787476709" duration="16000" />
-      <workItem from="1583788211296" duration="310000" />
-      <workItem from="1583788593185" duration="144000" />
-      <workItem from="1583790774012" duration="390000" />
-      <workItem from="1583791172565" duration="145000" />
-      <workItem from="1583791323008" duration="657000" />
-      <workItem from="1583791990606" duration="185000" />
-      <workItem from="1583792192838" duration="247000" />
-      <workItem from="1583792467208" duration="169000" />
-      <workItem from="1583792640908" duration="49000" />
-      <workItem from="1583800446018" duration="20000" />
-      <workItem from="1583802132312" duration="723000" />
-      <workItem from="1583802865960" duration="546000" />
-      <workItem from="1583803421391" duration="771000" />
-      <workItem from="1583812347072" duration="1462000" />
-      <workItem from="1583813826433" duration="4000" />
-      <workItem from="1583813833233" duration="124000" />
+      <updated>1583864882806</updated>
+      <workItem from="1583864884395" duration="265000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="0" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583804200599">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="0" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583804200599" />
-    <state x="708" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583297781859">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="708" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1583297781859" />
-    <state x="119" y="211" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1583298096389">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="119" y="211" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583298096389" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583812593327">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583812593327" />
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1583291499612">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583291499612" />
-    <state x="260" y="265" key="FileChooserDialogImpl" timestamp="1583296240266">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="260" y="265" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583296240266" />
-<<<<<<< HEAD
-    <state width="1493" height="165" key="GridCell.Tab.0.bottom" timestamp="1583841169980">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1583784939757" />
-    <state width="1493" height="165" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583841169980" />
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583291654259" />
-    <state width="1493" height="165" key="GridCell.Tab.0.center" timestamp="1583841169980">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1583784939757" />
-    <state width="1493" height="165" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583841169980" />
-    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583291654259" />
-    <state width="1493" height="165" key="GridCell.Tab.0.left" timestamp="1583841169980">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1583784939757" />
-    <state width="1493" height="165" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583841169980" />
-    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583291654259" />
-    <state width="1493" height="165" key="GridCell.Tab.0.right" timestamp="1583841169980">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1583784939757" />
-    <state width="1493" height="165" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583841169980" />
-    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583291654259" />
-    <state width="1877" height="279" key="GridCell.Tab.1.bottom" timestamp="1583291654259">
-=======
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1583804207624">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1583784939757" />
-    <state width="1493" height="139" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583708311330" />
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583804207624" />
-    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1583804207624">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1583784939757" />
-    <state width="1493" height="139" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583708311330" />
-    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583804207624" />
-    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1583804207624">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1583784939757" />
-    <state width="1493" height="139" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583708311330" />
-    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583804207624" />
-    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1583804207624">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1583784939757" />
-    <state width="1493" height="139" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583708311330" />
-    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583804207624" />
-    <state width="1877" height="279" key="GridCell.Tab.1.bottom" timestamp="1583804207624">
->>>>>>> 8ffc4692b7315c48730127fb9da38515886c72da
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="279" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583804207624" />
-    <state width="1877" height="279" key="GridCell.Tab.1.center" timestamp="1583804207624">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="279" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583804207624" />
-    <state width="1877" height="279" key="GridCell.Tab.1.left" timestamp="1583804207624">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="279" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583804207624" />
-    <state width="1877" height="279" key="GridCell.Tab.1.right" timestamp="1583804207624">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="279" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583804207624" />
-    <state x="0" y="98" key="SettingsEditor" timestamp="1583298296593">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="0" y="98" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583298296593" />
-    <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1583289740671">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583289740671" />
-    <state x="856" y="135" width="857" height="606" key="find.popup" timestamp="1583814032889">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-<<<<<<< HEAD
-    <state x="592" y="217" width="857" height="606" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583792359381" />
-    <state x="493" y="190" width="807" height="821" key="run.anything.popup" timestamp="1583841170012">
-      <screen x="0" y="0" width="1536" height="824" />
-=======
-    <state x="856" y="135" width="857" height="606" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583814032889" />
-    <state x="411" y="157" width="672" height="677" key="run.anything.popup" timestamp="1583793400797">
-      <screen x="0" y="0" width="1280" height="680" />
->>>>>>> 8ffc4692b7315c48730127fb9da38515886c72da
-    </state>
-    <state x="411" y="157" width="672" height="677" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1583793400797" />
-    <state x="493" y="190" width="807" height="821" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1583841170012" />
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583298458126" />
-    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1583731953320">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="143" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583731953320" />
   </component>
 </project>

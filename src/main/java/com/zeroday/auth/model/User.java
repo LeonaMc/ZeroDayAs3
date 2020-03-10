@@ -1,6 +1,8 @@
 package com.zeroday.auth.model;
 
 import javax.persistence.*;
+
+import java.util.List;
 import java.util.Set;
 
 @Entity
