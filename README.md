@@ -9,6 +9,11 @@ Leona McNulty<br />
 Anna Davison<br />
 Ciarán Conlon<br />
 
+# Group Leader:
+Leona McNulty
+# Team Members:
+Ciarán Conlon, Anna Davison
+
 # Database creation:
 create database library;<br />
 create user 'root'@'localhost' identified by 'root';<br />
@@ -21,41 +26,6 @@ grant all privileges on *.* to 'root'@'localhost';<br />
 mvn spring-boot:run<br />
 4. Go to web browser and type the following to direct you to the login page of the App:<br />
 localhost:8080/login<br />
-
-# Group Leader:
-Leona McNulty
-# Team Members:
-Ciarán Conlon, Anna Davison
-
-# Diary:
-
-# ZeroDay
-
-Previous project commits were made to the following repository (changed due to project restructure):
-https://github.com/LeonaMc/ZD
-
-# Collaborators
-Leona McNulty 
-Anna Davison 
-Ciarán Conlon
-
-# Database creation:
-create database library;
-create user 'root'@'localhost' identified by 'root';
-grant all privileges on *.* to 'root'@'localhost';
-
-# How to run:
-Ensure database, user and password have all been created in MySQL Command Line Client
-Go to the folder where the project is stored and type the following to run the App:
-mvn spring-boot:run
-Go to web browser and type the following to direct you to the login page of the App:
-localhost:8080/login
-
-
-# Group Leader:
-Leona McNulty
-# Team Members:
-Ciarán Conlon, Anna Davison
 
 # Diary:
 Leona: 
