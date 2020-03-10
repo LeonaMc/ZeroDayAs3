@@ -22,8 +22,8 @@ public class payFees {
         return payFees;
     }
 
-    public void setPayFees() {
-        payFees = true;
+    public void setPayFees(boolean payFees) {
+        this.payFees = payFees;
     }
 
     public String getCardNumber() {

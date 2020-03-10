@@ -78,6 +78,7 @@ public class UserController {
     @GetMapping({"/payFees"})
     public String payFees(@ModelAttribute("payFees") payFees user, Model model)
     {
+        System.out.println("PayFees: "+user.getPayFees());
         if (!user.getPayFees()) {
             model.addAttribute("payFees", new payFees());
             return "payFees";
@@ -95,7 +96,7 @@ public class UserController {
             return "payFees";
         }
 
-        user.setPayFees();
+        user.setPayFees(true);
 
         return "redirect:/welcome";
     }
