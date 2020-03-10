@@ -10,6 +10,7 @@
 <center>
     <h1>Module Management</h1>
     <h2>
+        <a href="/welcome">Go to Home</a>
         <a href="/listAllEnroledModules">View Available Modules</a>
         <a href="/listActiveEnrolledModules">View Active Modules</a>
     </h2>

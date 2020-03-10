@@ -10,7 +10,7 @@
 	<center>
 		<h1>Module Management</h1>
 		<h2>
-			<a href="/newEnrolModule">Add New Book</a> &nbsp;&nbsp;&nbsp; <a
+			<a href="/welcome">Go to Home</a> &nbsp;&nbsp;&nbsp; <a
 				href="/listAllEnroledModules">View Available Modules</a>
 		</h2>
 	</center>
