@@ -8,7 +8,7 @@
 <body>
 <center>
     <h1>My grades</h1>
-
+<h2><a href="/">Go back</a></h2>
 </center>
 <div align="center">
     <table border="1" cellpadding="5">
