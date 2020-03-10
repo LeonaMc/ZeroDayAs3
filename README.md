@@ -5,9 +5,9 @@ Previous project commits were made to the following repository (changed due to p
 https://github.com/LeonaMc/ZD
 
 # Collaborators
-Leona McNulty
-Anna Davison
-Ciarán Conlon
+Leona McNulty<br />
+Anna Davison<br />
+Ciarán Conlon<br />
 
 # Database creation:
 create database library;<br />
