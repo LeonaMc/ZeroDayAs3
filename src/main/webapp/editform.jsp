@@ -43,18 +43,23 @@
             </tr>
 
             <tr>
-                <th>Authors: </th>
-                <c:forEach var="author" items="${authors}">
-                    <td>
-                        <input type="text" name="name" size="45"
-                               value="<c:out value='${author.author_first_name} ${author.author_last_name}'/>" readonly
-                        />
-                    </td>
-
-
-                </c:forEach>
+                <th>Module Coordinator: </th>
+                <td>
+                    <input type="text" name="module_coord" size="45"
+                           value="<c:out value='${module.module_coord}' />"
+                    />
+                </td>
             </tr>
+
             <tr>
+                <th>Module Topic: </th>
+                <td>
+                    <input type="text" name="module_topic" size="45"
+                           value="<c:out value='${module.module_topic}' />"
+                    />
+                </td>
+            </tr>
+
             <tr>
                 <td colspan="2" align="center">
                 <td colspan="2" align="center">

@@ -29,7 +29,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
             .authorizeRequests()
                 // Add file here to bypass registration
-                .antMatchers("/resources/**", "/**", "/registration", "/staffWelcome", "/moduleform", "/editform", "/new", "/list", "/modules/save", "/modules/**").permitAll().anyRequest().authenticated()
+                .antMatchers("/resources/**", "/**", "/registration", "/staffWelcome", "/moduleform", "/editform", "/new", "newEnrolModule", "/list", "/modules/save", "/modules/**").permitAll().anyRequest().authenticated()
                 .and()
             .formLogin()
                 .loginPage("/login")
