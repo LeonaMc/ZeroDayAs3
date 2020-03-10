@@ -69,11 +69,11 @@ Ciarán:
 
 #### Login Page
 
-![alt text](http://url/to/1Login.png)
+![alt text](http://1Login.png)
 
 #### Registration Page
 
-![alt text](http://url/to/2Registration.png)
+![alt text](http://2Registration.png)
 
 # Project Details
 
