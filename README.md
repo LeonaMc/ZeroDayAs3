@@ -15,11 +15,11 @@ create user 'root'@'localhost' identified by 'root';
 grant all privileges on *.* to 'root'@'localhost';
 
 # How to run:
-Ensure database, user and password have all been created in MySQL Command Line Client
-Go to the folder where the project is stored and type the following to run the App:
-mvn spring-boot:run
-Go to web browser and type the following to direct you to the login page of the App:
-localhost:8080/login
+1. Ensure database, user and password have all been created in MySQL Command Line Client<br />
+2. Go to the folder where the project is stored and type the following to run the App:<br />
+mvn spring-boot:run<br />
+3. Go to web browser and type the following to direct you to the login page of the App:<br />
+localhost:8080/login<br />
 
 # Group Leader:
 Leona McNulty
