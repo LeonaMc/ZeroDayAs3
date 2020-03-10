@@ -78,25 +78,26 @@ public class UserController {
     @GetMapping({"/payFees"})
     public String payFees(Model model)
     {
-        model.addAttribute("payFees", new payFees());
-        return "payFees";
+        if (!model.containsAttribute("payFees")) {
+            model.addAttribute("payFees", new payFees());
+            return "payFees";
+        }else{
+            return "welcome";
+        }
     }
 
     @PostMapping("/payFees")
     public String payFees(@ModelAttribute("payFees") payFees user, BindingResult bindingResult) {
-        String direction = "redirect:/welcome";
 
-         userValidator.validateFees(user, bindingResult);
+        userValidator.validateFees(user, bindingResult);
 
-         if (bindingResult.hasErrors()) {
-                direction="payFees";
-         }
-
-        if (!user.getPayFees()) {
-            user.setPayFees();
+        if (bindingResult.hasErrors()) {
+            return "payFees";
         }
 
-        return direction;
+        user.setPayFees();
+
+        return "redirect:/welcome";
     }
 
     @RequestMapping("/remove/{username}")
@@ -108,5 +109,3 @@ public class UserController {
     }
 
 }
-
-
