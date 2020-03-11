@@ -4,6 +4,7 @@ com\zeroday\auth\repository\RoleRepository.class
 com\zeroday\auth\model\Role.class
 com\zeroday\auth\service\SecurityServiceImpl.class
 com\zeroday\auth\WebApplication.class
+com\zeroday\auth\repository\FeesRepository.class
 com\zeroday\auth\service\SecurityService.class
 com\zeroday\auth\repository\UserRepository.class
 com\zeroday\auth\model\User.class

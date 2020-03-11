@@ -1,15 +1,26 @@
 package com.zeroday.auth.web;
 
-import com.zeroday.auth.model.User;
-import com.zeroday.auth.model.payFees;
-import com.zeroday.auth.service.SecurityService;
-import com.zeroday.auth.service.UserService;
-import com.zeroday.auth.validator.UserValidator;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.zeroday.auth.model.Grade;
+import com.zeroday.auth.model.User;
+import com.zeroday.auth.model.payFees;
+import com.zeroday.auth.repository.FeesRepository;
+import com.zeroday.auth.repository.GradeRepository;
+import com.zeroday.auth.repository.UserRepository;
+import com.zeroday.auth.service.SecurityService;
+import com.zeroday.auth.service.UserService;
+import com.zeroday.auth.validator.UserValidator;
 
 @Controller
 public class UserController {
@@ -21,6 +32,15 @@ public class UserController {
 
     @Autowired
     private UserValidator userValidator;
+
+    @Autowired
+    private FeesRepository feesRepository;
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private GradeRepository gradeRepository;
 
     @GetMapping("/registration")
     public String registration(Model model) {
@@ -55,54 +75,60 @@ public class UserController {
         return "login";
     }
 
-    @GetMapping({"/", "/welcome"})
+    @GetMapping({ "/", "/welcome" })
     public String welcome(Model model) {
         return "welcome";
     }
 
-    @GetMapping({"/gradeChange"})
+    @GetMapping({ "/gradeChange" })
     public String gradeChange(Model model) {
         return "gradeChange";
     }
 
-    @GetMapping({"/moduleEnrolment"})
+    @GetMapping({ "/moduleEnrolment" })
     public String moduleEnrolment(Model model) {
         return "moduleEnrolment";
     }
 
-    @GetMapping({"/viewGrades"})
+    @GetMapping({ "/viewGrades" })
     public String viewGrades(Model model) {
+        String username = securityService.findLoggedInUsername();
+        User user = userRepository.findByUsername(username);
+        List<Grade> listGrades = gradeRepository.findByStudentID(user.getId());
+        model.addAttribute("listGrades", listGrades);
         return "viewGrades";
     }
 
-    @GetMapping({"/payFees"})
-    public String payFees(@ModelAttribute("payFees") payFees user, Model model)
-    {
-        System.out.println("PayFees: "+user.getPayFees());
-        if (!user.getPayFees()) {
+    @GetMapping({ "/payFees" })
+    public String payFees(@ModelAttribute("payFees") payFees payFee, Model model) {
+        String username = securityService.findLoggedInUsername();
+        User user = userRepository.findByUsername(username);
+        if (user.getPayFeesSet().isEmpty()) {
             model.addAttribute("payFees", new payFees());
             return "payFees";
-        }else{
+        } else {
             return "welcome";
         }
     }
 
     @PostMapping("/payFees")
-    public String payFees(@ModelAttribute("payFees") payFees user, BindingResult bindingResult) {
+    public String payFees(@ModelAttribute("payFees") payFees fees, BindingResult bindingResult) {
 
-        userValidator.validateFees(user, bindingResult);
+        userValidator.validateFees(fees, bindingResult);
 
         if (bindingResult.hasErrors()) {
             return "payFees";
         }
-
-        user.setPayFees(true);
+        String username = securityService.findLoggedInUsername();
+        User user = userRepository.findByUsername(username);
+        fees.setUser(user);
+        feesRepository.save(fees);
 
         return "redirect:/welcome";
     }
 
     @RequestMapping("/remove/{username}")
-    public String deleteUser(@PathVariable(value = "username") String username){
+    public String deleteUser(@PathVariable(value = "username") String username) {
         User user = userService.findByUsername(username);
         userService.delete(user);
 

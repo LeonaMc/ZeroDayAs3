@@ -11,7 +11,6 @@ public class Grade {
     private String studentName;
     @NotBlank
     private String module;
-    @NotBlank
     private Long grade;
     public Grade(){
         super();

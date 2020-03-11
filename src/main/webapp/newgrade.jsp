@@ -28,10 +28,9 @@
         <h2 class="form-signin-heading">Input grade details</h2>
 
         <spring:bind path="studentID">
-            <div class="form-group ${status.error ? 'has-error' : ''}">
+            <div >
                 <form:input type="number" path="studentID" class="form-control" placeholder="Student ID"
                             autofocus="true"></form:input>
-                <form:errors path="studentID"></form:errors>
             </div>
         </spring:bind>
 

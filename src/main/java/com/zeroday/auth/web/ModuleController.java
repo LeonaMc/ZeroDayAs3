@@ -3,14 +3,13 @@ package com.zeroday.auth.web;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import org.springframework.validation.BindingResult;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,11 +19,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.zeroday.auth.exception.AuthorNotFoundException;
 import com.zeroday.auth.exception.ModuleNotFoundException;
-import com.zeroday.auth.model.Module;
-import com.zeroday.auth.repository.ModuleRepository;
 import com.zeroday.auth.model.Grade;
-import com.zeroday.auth.repository.GradeRepository;
+import com.zeroday.auth.model.Module;
 import com.zeroday.auth.model.User;
+import com.zeroday.auth.repository.GradeRepository;
 import com.zeroday.auth.repository.ModuleRepository;
 import com.zeroday.auth.repository.UserRepository;
 import com.zeroday.auth.service.SecurityService;
@@ -47,7 +45,6 @@ public class ModuleController {
 
     @Autowired
     private SecurityService securityService;
-
 
     @RequestMapping({ "/list" })
     public String viewHomePage(Model model) {
@@ -109,7 +106,9 @@ public class ModuleController {
 
     // Create a new Note
     @RequestMapping("/listgrades")
-    public String listGrades() {
+    public String listGrades(Model model) {
+        List<Grade> listGrades = gradeRepository.findAll();
+        model.addAttribute("listGrades", listGrades);
         return "listgrades";
     }
 
@@ -123,6 +122,8 @@ public class ModuleController {
     public String listAllEnroledModules(Model model) {
         List<Module> listModules = moduleRepository.findAll();
         model.addAttribute("listModules", listModules);
+        String username = securityService.findLoggedInUsername();
+        model.addAttribute("connectedUser", userRepository.findByUsername(username));
         return "moduleEnrolment";
     }
 
@@ -169,20 +170,21 @@ public class ModuleController {
     @RequestMapping({ "/statistics" })
     public String statistics(Model model) {
         List<User> users = userRepository.findAll();
-        Map<String, List<User>> nationalitiesMap =
-                users.stream().collect(Collectors.groupingBy(User::getNationality));
+        Map<String, List<User>> nationalitiesMap = users.stream().collect(Collectors.groupingBy(User::getNationality));
         Predicate<User> byGender = user -> user.getGender().equals("M");
         List<User> males = users.stream().filter(byGender).collect(Collectors.toList());
         model.addAttribute("males", males.size());
         model.addAttribute("femals", users.size() - males.size());
-        model.addAttribute("nationalitiesMap",nationalitiesMap);
+        model.addAttribute("nationalitiesMap", nationalitiesMap);
         return "statistics";
     }
+
     @RequestMapping(value = "/newgrade", method = RequestMethod.GET)
     public String enterGrade(Model model) {
         model.addAttribute("newgrade", new Grade());
         return "newgrade";
     }
+
     @PostMapping("/newgrade")
     public String newgrade(@ModelAttribute("newgrade") Grade thisgrade, BindingResult bindingResult) {
 
@@ -191,6 +193,7 @@ public class ModuleController {
         if (bindingResult.hasErrors()) {
             return "newgrade";
         }
+        gradeRepository.save(thisgrade);
 
         return "redirect:/gradeChange";
     }

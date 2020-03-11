@@ -8,7 +8,7 @@
 <body>
 <center>
     <h1>My grades</h1>
-<h2><a href="/">Go back</a></h2>
+    <h2><a href="/">Go back</a></h2>
 </center>
 <div align="center">
     <table border="1" cellpadding="5">
@@ -19,7 +19,7 @@
             <th>Module</th>
             <th>Grade</th>
         </tr>
-        <c:forEach var="grade" items="${listgrades}">
+        <c:forEach var="grade" items="${listGrades}">
             <tr>
                 <td><c:out value="${grade.studentID}" /></td>
                 <td><c:out value="${grade.studentName}" /></td>

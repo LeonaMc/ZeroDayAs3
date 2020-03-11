@@ -1,14 +1,20 @@
 package com.zeroday.auth.model;
 
-import javax.persistence.*;
-import java.util.Set;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "payFees")
 public class payFees {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private boolean payFees = false;
+    private Long feesId;
 
     private String cardNumber;
 
@@ -18,12 +24,16 @@ public class payFees {
 
     private String cardName;
 
-    public boolean getPayFees() {
-        return payFees;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "USER_ID")
+    private User user;
+
+    public Long getPayFees() {
+        return feesId;
     }
 
-    public void setPayFees(boolean payFees) {
-        this.payFees = payFees;
+    public void setPayFees(Long feesId) {
+        this.feesId = feesId;
     }
 
     public String getCardNumber() {
@@ -46,7 +56,9 @@ public class payFees {
         return expireDate;
     }
 
-    public void setExpireDateString (String expireDate) { this.expireDate = expireDate; }
+    public void setExpireDateString(String expireDate) {
+        this.expireDate = expireDate;
+    }
 
     public String getCardName() {
         return cardName;
@@ -55,4 +67,25 @@ public class payFees {
     public void setCardName(String cardName) {
         this.cardName = cardName;
     }
+
+    public Long getFeesId() {
+        return feesId;
+    }
+
+    public void setFeesId(Long feesId) {
+        this.feesId = feesId;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setExpireDate(String expireDate) {
+        this.expireDate = expireDate;
+    }
+
 }

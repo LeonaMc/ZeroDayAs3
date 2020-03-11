@@ -6,18 +6,18 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta charset="utf-8">
-      <title>Log in with your account</title>
+<head>
+    <meta charset="utf-8">
+    <title>Log in with your account</title>
 
-      <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
-      <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
-  </head>
+    <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
+</head>
 
-  <body>
+<body>
 
-    <div class="container">
-      <form method="POST" action="${contextPath}/login" class="form-signin">
+<div class="container">
+    <form method="POST" action="${contextPath}/login" class="form-signin">
         <h2 class="form-heading">Log in</h2>
 
         <div class="form-group ${error != null ? 'has-error' : ''}">
@@ -39,10 +39,10 @@
 
 
         </div>
-      </form>
-    </div>
+    </form>
+</div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="${contextPath}/resources/js/bootstrap.min.js"></script>
-  </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="${contextPath}/resources/js/bootstrap.min.js"></script>
+</body>
 </html>

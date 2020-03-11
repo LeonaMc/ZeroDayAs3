@@ -24,17 +24,17 @@
             <th>Module</th>
             <th>Grade</th>
         </tr>
-        <c:forEach var="grade" items="${listgrades}">
+        <c:forEach var="grade" items="${listGrades}">
             <tr>
                 <td><c:out value="${grade.studentID}" /></td>
                 <td><c:out value="${grade.studentName}" /></td>
                 <td><c:out value="${grade.module}" /></td>
                 <td><c:out value="${grade.grade}" /></td>
-                <td>
-                    <a href="/grades/${grade.studentID}"/>Edit</a>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/deletegrade/${grade.studentID}"  />Delete</a>
-                </td>
+                    <%--    <td>
+                           <a href="/grades/${grade.studentID}"/>Edit</a>
+                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                           <a href="/deletegrade/${grade.studentID}"  />Delete</a>
+                       </td> --%>
             </tr>
         </c:forEach>
 

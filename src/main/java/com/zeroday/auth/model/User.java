@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
@@ -50,6 +52,10 @@ public class User {
 
     @ManyToMany
     private Set<Module> modules;
+
+    @OneToMany(mappedBy="user")
+    private Set<payFees> payFeesSet;
+
 
     public Long getId() {
         return id;
@@ -172,5 +178,14 @@ public class User {
     public void setNationality(String nationality) {
         this.nationality = nationality;
     }
+
+    public Set<payFees> getPayFeesSet() {
+        return payFeesSet;
+    }
+
+    public void setPayFeesSet(Set<payFees> payFeesSet) {
+        this.payFeesSet = payFeesSet;
+    }
+
 
 }

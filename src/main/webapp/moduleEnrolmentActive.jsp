@@ -10,15 +10,25 @@
 <center>
 	<h1>Module Management</h1>
 	<h2>
-		<a href="/newEnrolModule">Add New Book</a> &nbsp;&nbsp;&nbsp; <a
-			href="/listAllEnroledModules">View Available Modules</a>
+		<a href="/moduleEnrolment">Back to Module Management</a> &nbsp;&nbsp;&nbsp; <a
+			href="/listAllEnroledModules">Enrol in a Module</a>
 	</h2>
+	<h2>
+		<a href="/listActiveEnrolledModules">View Current Modules</a>&nbsp;&nbsp;
+		<a href="/statistics">Statistics</a><br />
+	</h2>
+
+	<h2>
+		<a href="/welcome">Back to Home</a> &nbsp;&nbsp;&nbsp; <a
+			href="/listAllEnroledModules">Enrol in a Module</a><br />
+	</h2>
+
 </center>
 
 <div align="center">
 	<table border="1" cellpadding="5">
 		<caption>
-			<h2>List of active Modules</h2>
+			<h2>List of Active Modules</h2>
 		</caption>
 		<tr>
 			<th>ID</th>

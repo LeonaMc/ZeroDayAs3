@@ -32,6 +32,9 @@ public class Module {
 
     private String module_topic;
 
+    @Column(name = "closed", nullable = false)
+    private boolean closed = false;
+
     @ManyToMany
     private Set<User> users;
 
@@ -102,6 +105,7 @@ public class Module {
         this.numberOfRegistredStudents = numberOfRegistredStudents;
     }
 
+
     public Set<User> getUsers() {
         return users;
     }
@@ -109,5 +113,18 @@ public class Module {
     public void setUsers(Set<User> users) {
         this.users = users;
     }
+
+    public boolean isClosed() {
+        return closed;
+    }
+
+    public void setClosed(boolean closed) {
+        this.closed = closed;
+    }
+
+
+
+
+
 
 }

@@ -91,14 +91,11 @@ public class UserValidator implements Validator {
     public void validateGrades(Object o, Errors errors){
         Grade thisGrade = (Grade) o;
 
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "studentID", "NotEmpty");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "studentName", "NotEmpty");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "module", "NotEmpty");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "grade", "NotEmpty");
 
-        if(thisGrade.getStudentID() < 10000000 || thisGrade.getStudentID() > 99999999){
-            errors.rejectValue("studentID", "Size.newgrade.studentID");
-        }
+
         if(!thisGrade.getStudentName().contains(" ")) {
             errors.rejectValue("studentName", "Fullname.newgrade.studentName");
         }

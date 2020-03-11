@@ -4,26 +4,22 @@
 
 <html>
 <head>
-	<style>
-	</style>
+
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<title>Module Enrolment</title>
+
 </head>
 <body>
-
-
 <center>
 	<h1>Statistics</h1>
 	<h2>
-		<a href="/newEnrolModule">Add New Book</a> &nbsp;&nbsp;&nbsp; <a
+		<a href="/welcome">Back to Home Page</a> &nbsp;&nbsp;&nbsp; <a
 			href="/listAllEnroledModules">View Available Modules</a>
 	</h2>
+	<h2>
+		<a href="/listActiveEnrolledModules">View Current Modules</a>
+	</h2>
 </center>
-
-
-
-
-
 
 <div id="content">
 
