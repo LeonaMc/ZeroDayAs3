@@ -39,9 +39,11 @@ Leona:
        less digits (International Standard). See UserValidator.java and validation.properties for
        more details on error messages.
        Reject unregistered users at sign-in. 
-       Creation Module Managment section. Allow students to view available modules & enrol and 
-       unenrol in a module, view a list of
-       available modules and view a list of modules that they are currently enroled in. 
+       Creation of Module Managment section. Allow students to view available modules & enrol and 
+       unenrol in a module, if the module is full then the user can't enrol. This is set to 2 for 
+       testing purposes.
+       Allow students to view a list of available modules that they are currently enroled in. 
+       Allow student to view statistics using third party library https://d3js.org/ to visualise statistics.
        Creation of Staff Functionality such that the staff can add new module, view all modules
        and edit pre-existing modules.
        Refactoring & Debugging.
