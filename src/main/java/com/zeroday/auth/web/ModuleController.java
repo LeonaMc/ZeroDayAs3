@@ -107,12 +107,6 @@ public class ModuleController {
         return "newgrade";
     }
 
-    @PostMapping("/gradeChange")
-    public String createGrade(@ModelAttribute("grade")  Grade grade, Model model) {
-        gradeRepository.save(grade);
-        return "gradeChange";// CHANGED THIS LINE FOR TESTING
-    }
-
     // Create a new Note
     @RequestMapping("/listgrades")
     public String listGrades() {

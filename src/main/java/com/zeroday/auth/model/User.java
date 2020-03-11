@@ -1,14 +1,22 @@
 package com.zeroday.auth.model;
 
-import javax.persistence.*;
-
-import java.util.List;
 import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "user")
 public class User {
+
     @Id
+    @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -30,7 +38,7 @@ public class User {
 
     private String address;
 
-    private String gender = "F";
+    private String gender;
 
     private String nationality;
 
@@ -96,6 +104,7 @@ public class User {
     public String getFirstName() {
         return firstName;
     }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -103,6 +112,7 @@ public class User {
     public String getLastName() {
         return lastName;
     }
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
@@ -110,6 +120,7 @@ public class User {
     public String getEmail() {
         return email;
     }
+
     public void setEmail(String email) {
         this.email = email;
     }
@@ -117,6 +128,7 @@ public class User {
     public String getStudentNumber() {
         return studentNumber;
     }
+
     public void setStudentNumber(String studentNumber) {
         this.studentNumber = studentNumber;
     }
@@ -124,6 +136,7 @@ public class User {
     public String getMobileNum() {
         return mobileNum;
     }
+
     public void setMobileNum(String mobileNum) {
         this.mobileNum = mobileNum;
     }
@@ -131,6 +144,7 @@ public class User {
     public String getHomeNum() {
         return homeNum;
     }
+
     public void setHomeNum(String homeNum) {
         this.homeNum = homeNum;
     }
@@ -138,6 +152,7 @@ public class User {
     public String getAddress() {
         return address;
     }
+
     public void setAddress(String address) {
         this.address = address;
     }
@@ -145,6 +160,7 @@ public class User {
     public String getGender() {
         return gender;
     }
+
     public void setGender(String gender) {
         this.gender = gender;
     }
@@ -152,7 +168,9 @@ public class User {
     public String getNationality() {
         return nationality;
     }
+
     public void setNationality(String nationality) {
         this.nationality = nationality;
     }
+
 }

@@ -18,8 +18,10 @@ import org.hibernate.annotations.ManyToAny;
 @Entity
 @Table(name = "modules")
 public class Module {
+
     @Id
-    @GeneratedValue
+    @Column(name = "module_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotBlank
     private String module_name;
