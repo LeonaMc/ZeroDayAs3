@@ -4,16 +4,16 @@
 
 <html>
 <head>
-    <link rel="stylesheet" href="${contextPath}/resources/css/mainstyle.css">
     <title>Module Enrolment</title>
 </head>
 <body>
 <center>
     <h1>Module Management</h1>
     <h2>
-        <a href="/welcome">Go to Home</a>
-        <a href="/listAllEnroledModules">View Available Modules</a>
-        <a href="/listActiveEnrolledModules">View Active Modules</a>
+        <a href="/newEnrolModule">Add New Book</a> &nbsp;&nbsp;&nbsp; <a
+            href="/listAllEnroledModules">View Available Modules</a> <a
+            href="/listActiveEnrolledModules">View Active Modules</a> <a
+            href="/statistics">Statistics</a>
     </h2>
 
 
@@ -30,6 +30,7 @@
             <th>School</th>
             <th>Module Coordinator</th>
             <th>Module Topic</th>
+            <th>Number of students</th>
             <th>Actions</th>
         </tr>
         <c:forEach var="module" items="${listModules}">
@@ -40,16 +41,11 @@
                 <td><c:out value="${module.school}" /></td>
                 <td><c:out value="${module.module_coord}" /></td>
                 <td><c:out value="${module.module_topic}" /></td>
-                <td>
-                    <c:if test="${!module.enroll}">
-                        <a href="/modules/enroll/${module.id}" />enroll</a>
-                    </c:if>
-                    <!-- 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     -->					<c:if test="${module.enroll}">
-                    <a href="/modules/cancel/${module.id}" />cancel</a>
-                </c:if>
-
-                </td>
+                <td><c:out value="${module.users.size()}" /></td>
+                <td><c:if test="${module.users.size() < 2}">
+                    <a href="/modules/enroll/${module.id}" />enroll</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </c:if> <a href="/modules/cancel/${module.id}" />cancel</a></td>
             </tr>
         </c:forEach>
 

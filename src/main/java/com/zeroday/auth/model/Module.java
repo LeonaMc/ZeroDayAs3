@@ -1,10 +1,19 @@
 package com.zeroday.auth.model;
 
+import java.util.Set;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotBlank;
+
+
+import org.hibernate.annotations.ManyToAny;
 
 @Entity
 @Table(name = "modules")
@@ -21,7 +30,11 @@ public class Module {
 
     private String module_topic;
 
-    private boolean enroll;
+    @ManyToMany
+    private Set<User> users;
+
+    @Transient
+    private int numberOfRegistredStudents;
 
     public Module() {
         super();
@@ -35,7 +48,7 @@ public class Module {
         this.school = school;
         this.module_coord = module_coord;
         this.module_topic = module_topic;
-        this.enroll = enroll;
+
     }
 
     public Long getId() {
@@ -78,12 +91,21 @@ public class Module {
         this.module_topic = module_topic;
     }
 
-    public boolean isEnroll() {
-        return enroll;
+
+    public int getNumberOfRegistredStudents() {
+        return numberOfRegistredStudents;
     }
 
-    public void setEnroll(boolean enroll) {
-        this.enroll = enroll;
+    public void setNumberOfRegistredStudents(int numberOfRegistredStudents) {
+        this.numberOfRegistredStudents = numberOfRegistredStudents;
+    }
+
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
     }
 
 }

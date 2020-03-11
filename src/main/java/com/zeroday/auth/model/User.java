@@ -40,6 +40,9 @@ public class User {
     @ManyToMany
     private Set<Role> roles;
 
+    @ManyToMany
+    private Set<Module> modules;
+
     public Long getId() {
         return id;
     }
@@ -81,6 +84,14 @@ public class User {
     }
 
     //
+
+    public Set<Module> getModules() {
+        return modules;
+    }
+
+    public void setModules(Set<Module> modules) {
+        this.modules = modules;
+    }
 
     public String getFirstName() {
         return firstName;

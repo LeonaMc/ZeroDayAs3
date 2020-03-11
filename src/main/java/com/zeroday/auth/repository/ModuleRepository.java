@@ -11,8 +11,8 @@ import com.zeroday.auth.model.Module;
 @Repository
 public interface ModuleRepository extends JpaRepository<Module, Long> {
 
-    List<Module> findByEnroll(Boolean enroll);
+  //  List<Module> findByEnroll(Boolean enroll);
 
-    @Query("SELECT m FROM Module m where m.enroll  = TRUE")
-    List<Module> getListOfEnrolledModules();
+   // @Query("SELECT m FROM Module m where m.enroll  = TRUE")
+   // List<Module> getListOfEnrolledModules();
 }
