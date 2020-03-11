@@ -47,6 +47,10 @@ Leona:
        can view the number of students with x nationality and the amount of students that are male vs female.
        Creation of Staff Functionality such that the staff can add new module, view all modules
        and edit pre-existing modules.
+       Get functionality to check student has paid before they enrol working.
+       Get functionality that allows staff to input grades working. Get these grades to appear on
+       a new page for staff to view.
+       Allow students to view their grades.
        Refactoring & Debugging.
 
 Anna:  
