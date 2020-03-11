@@ -56,16 +56,6 @@ public class UserValidator implements Validator {
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "homeNum", "NotEmpty");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "address", "NotEmpty");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "gender", "NotEmpty");
-
-        // Commented out code is testing if Male and Female values are reading correctly
-        /**     if (user.getGender().equals("F")) {
-         errors.rejectValue("gender", "Size.userForm.mobileNumShort");
-         }else if(user.getGender().equals("M")){
-         errors.rejectValue("gender", "Size.userForm.mobileNumLong");
-         } **/
-
-
-
     }
 
     public void validateFees(Object o, Errors errors) {
@@ -73,8 +63,9 @@ public class UserValidator implements Validator {
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "cardNumber", "NotEmpty");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "securityCode", "NotEmpty");
-        //ValidationUtils.rejectIfEmptyOrWhitespace(errors, "expireDate", "NotEmpty");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "cardName", "NotEmpty");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "expireDate", "NotEmpty");
+
 
         if (user.getCardNumber().length() != 16) {
             errors.rejectValue("cardNumber", "Size.payFees.cardNumber");
@@ -82,10 +73,6 @@ public class UserValidator implements Validator {
         if (user.getSecurityCode().length() != 3) {
             errors.rejectValue("securityCode", "Size.payFees.securityCode");
         }
-//        if (user.getExpireDate().length() != 7) {
-//            errors.rejectValue("expireDate", "Size.payFees.expireDate");
-//        }
-
     }
 
     public void validateGrades(Object o, Errors errors){
