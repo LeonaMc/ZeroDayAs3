@@ -43,7 +43,8 @@ Leona:
        unenrol in a module, if the module is full then the user can't enrol. This is set to 2 for 
        testing purposes.
        Allow students to view a list of available modules that they are currently enroled in. 
-       Allow student to view statistics using third party library https://d3js.org/ to visualise statistics.
+       Allow student to view statistics using third party library https://d3js.org/ to visualise statistics. Students 
+       can view the number of students with x nationality and the amount of students that are male vs female.
        Creation of Staff Functionality such that the staff can add new module, view all modules
        and edit pre-existing modules.
        Refactoring & Debugging.
