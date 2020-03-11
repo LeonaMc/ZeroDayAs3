@@ -96,19 +96,16 @@ public class UserValidator implements Validator {
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "module", "NotEmpty");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "grade", "NotEmpty");
 
-        if(thisGrade.getStudentID().getClass().toString()!="Long"){
-            errors.rejectValue("studentID", "NoLetters.newgrade.studentID");
+        if(thisGrade.getStudentID() < 10000000 || thisGrade.getStudentID() > 99999999){
+            errors.rejectValue("studentID", "Size.newgrade.studentID");
         }
         if(!thisGrade.getStudentName().contains(" ")) {
             errors.rejectValue("studentName", "Fullname.newgrade.studentName");
         }
         if(thisGrade.getModule().length()>45){
-            errors.rejectValue("module", "Size.newgrade.modul");
+            errors.rejectValue("module", "Size.newgrade.module");
         }
-        if(thisGrade.getGrade().getClass().toString()!="Long"){
-            errors.rejectValue("grade", "NoLetters.newgrade.grade");
-        }
-        if(thisGrade.getGrade()>100){
+        if(thisGrade.getGrade()>100 || thisGrade.getGrade() < 0){
             errors.rejectValue("grade", "Size.newgrade.grade");
         }
     }

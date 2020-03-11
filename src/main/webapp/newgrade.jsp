@@ -25,38 +25,38 @@
 
 <div class="container">
     <form:form method="POST" modelAttribute="newgrade" class="form-signin">
-    <h2 class="form-signin-heading">Input grade details</h2>
+        <h2 class="form-signin-heading">Input grade details</h2>
 
-    <spring:bind path="studentID">
-    <div class="form-group ${status.error ? 'has-error' : ''}">
-        <form:input type="text" path="studentID" class="form-control" placeholder="Student ID"
-                    autofocus="true"></form:input>
-        <form:errors path="studentID"></form:errors>
-    </div>
-    </spring:bind>
+        <spring:bind path="studentID">
+            <div class="form-group ${status.error ? 'has-error' : ''}">
+                <form:input type="number" path="studentID" class="form-control" placeholder="Student ID"
+                            autofocus="true"></form:input>
+                <form:errors path="studentID"></form:errors>
+            </div>
+        </spring:bind>
 
-    <spring:bind path="studentName">
-    <div class="form-group ${status.error ? 'has-error' : ''}">
-        <form:input type="text" path="studentName" class="form-control" placeholder="Student Name"></form:input>
-        <form:errors path="studentName"></form:errors>
-    </div>
-    </spring:bind>
+        <spring:bind path="studentName">
+            <div class="form-group ${status.error ? 'has-error' : ''}">
+                <form:input type="text" path="studentName" class="form-control" placeholder="Student Name"></form:input>
+                <form:errors path="studentName"></form:errors>
+            </div>
+        </spring:bind>
 
-    <spring:bind path="module">
-    <div class="form-group ${status.error ? 'has-error' : ''}">
-        <form:input type="text" path="module" class="form-control" placeholder="Module Name"></form:input>
-        <form:errors path="module"></form:errors>
-    </div>
-    </spring:bind>
+        <spring:bind path="module">
+            <div class="form-group ${status.error ? 'has-error' : ''}">
+                <form:input type="text" path="module" class="form-control" placeholder="Module Name"></form:input>
+                <form:errors path="module"></form:errors>
+            </div>
+        </spring:bind>
 
-    <spring:bind path="grade">
-    <div class="form-group ${status.error ? 'has-error' : ''}">
-        <form:input type="text" path="grade" class="form-control" placeholder="Student's Grade"></form:input>
-        <form:errors path="grade"></form:errors>
-    </div>
-    </spring:bind>
+        <spring:bind path="grade">
+            <div class="form-group ${status.error ? 'has-error' : ''}">
+                <form:input type="number" path="grade" class="form-control" placeholder="Student's Grade"></form:input>
+                <form:errors path="grade"></form:errors>
+            </div>
+        </spring:bind>
 
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
 
     </form:form>
 </div>

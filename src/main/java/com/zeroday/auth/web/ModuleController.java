@@ -6,6 +6,7 @@ import java.util.Set;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import org.springframework.validation.BindingResult;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,12 +28,16 @@ import com.zeroday.auth.model.User;
 import com.zeroday.auth.repository.ModuleRepository;
 import com.zeroday.auth.repository.UserRepository;
 import com.zeroday.auth.service.SecurityService;
+import com.zeroday.auth.validator.UserValidator;
 
 @Controller
 public class ModuleController {
 
     @Autowired
     ModuleRepository moduleRepository;
+
+    @Autowired
+    private UserValidator userValidator;
 
     @Autowired
     GradeRepository gradeRepository;
@@ -179,10 +184,20 @@ public class ModuleController {
         model.addAttribute("nationalitiesMap",nationalitiesMap);
         return "statistics";
     }
-
     @RequestMapping(value = "/newgrade", method = RequestMethod.GET)
     public String enterGrade(Model model) {
         model.addAttribute("newgrade", new Grade());
         return "newgrade";
+    }
+    @PostMapping("/newgrade")
+    public String newgrade(@ModelAttribute("newgrade") Grade thisgrade, BindingResult bindingResult) {
+
+        userValidator.validateGrades(thisgrade, bindingResult);
+
+        if (bindingResult.hasErrors()) {
+            return "newgrade";
+        }
+
+        return "redirect:/gradeChange";
     }
 }
