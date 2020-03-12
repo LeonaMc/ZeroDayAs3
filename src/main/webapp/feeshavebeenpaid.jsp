@@ -13,7 +13,12 @@
     <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
 </head>
 <body>
-
+<div class="container">
+    <c:if test="${pageContext.request.userPrincipal.name != null}">
+        <form id="logoutForm" method="POST" action="${contextPath}/logout">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        </form>
+    </c:if></div>
 <center>
 <h1>Fees Paid</h1>
 <p>Your fees have already been paid, you can now enrol in modules.</p>
