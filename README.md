@@ -173,3 +173,12 @@ to do so.
 Staff can modify module info. Staff are allowed to modify information about modules.
 
 Staff can input grades. Staff are allowed to input grades for students when a module terminates.
+
+
+# References
+
+Registration and Login:
+https://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/
+
+D3js:
+https://stackoverflow.com/questions/31703396/d3-pie-chart-element-popout/31706125#31706125
