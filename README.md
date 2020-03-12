@@ -177,8 +177,8 @@ Staff can input grades. Staff are allowed to input grades for students when a mo
 
 # References
 
-Registration and Login:
-https://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/
+Registration and Login: <br />
+https://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/ <br />
 
-D3js:
-https://stackoverflow.com/questions/31703396/d3-pie-chart-element-popout/31706125#31706125
+D3js: <br />
+https://stackoverflow.com/questions/31703396/d3-pie-chart-element-popout/31706125#31706125 <br />
