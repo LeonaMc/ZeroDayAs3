@@ -22,8 +22,8 @@
     </h2>
 </center>
 <div align="center">
-    <form action="/staffWelcome" method="post" class="table table-striped">
-        <table border="1" cellpadding="5">
+    <form action="/staffWelcome" method="post">
+        <table border="1" cellpadding="5" class="table table-striped">
             <caption>
                 <h2> Add New Module</h2>
             </caption>
@@ -69,11 +69,6 @@
                 </td>
             </tr>
         </table>
-
-
-        Choose your favorite subject:
-        <button name="subject" type="submit" value="fav_HTML">HTML</button>
-        <button name="subject" type="submit" value="fav_CSS">CSS</button>
 
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
