@@ -13,14 +13,18 @@
 </head>
 <body>
 <center>
-    <h1>Grade Change</h1>
-    <h2>
-        <a href="/newgrade">Add New Grade Information</a>
-        &nbsp;&nbsp;&nbsp;
-        <a href="/listgrades">List All Grades</a>
-
-    </h2>
+    <h1>Staff Area</h1>
+    <br /><br />
+    <h3>
+        <a href="/login">Back to Login</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/new">Add New Module</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/list">List All Modules</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/newgrade">Add Grade</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/listgrades">All Grades</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </h3>
+    <br /><br />
 </center>
+
 <div align="center">
     <table border="1" cellpadding="5" class="table table-striped">
         <caption><h2>List of Grades</h2></caption>

@@ -13,19 +13,24 @@
 </head>
 <body>
 <center>
-    <h1>Modules Management</h1>
-    <h2>
-        <a href="/new">Add New Module</a>
-        &nbsp;&nbsp;&nbsp;
-        <a href="/list">List All Modules</a>
-
-    </h2>
+    <h1>Staff Area</h1>
+    <br /><br />
+    <h3>
+        <a href="/login">Back to Login</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/new">Add New Module</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/list">List All Modules</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/newgrade">Add Grade</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/listgrades">All Grades</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </h3>
+    <br /><br />
 </center>
 <div align="center">
     <form action="/staffWelcome" method="post">
         <table border="1" cellpadding="5" class="table table-striped">
             <caption>
-                <h2> Add New Module</h2>
+                <center>
+                <h3> Add New Module</h3>
+                </centre>
             </caption>
             <tr>
                 <th>Module Name: </th>

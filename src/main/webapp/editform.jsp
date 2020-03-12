@@ -7,20 +7,22 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Modules Store Application</title>
+    <title>Add New Module</title>
     <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
 </head>
 <body>
 <center>
-    <h1>Modules Management</h1>
-    <br /><br /><br />
+    <h1>Staff Area</h1>
+    <br /><br />
     <h3>
-        <a href="/new">Add New Module</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="/list">List All Modules</a>
+        <a href="/login">Back to Login</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/new">Add New Module</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/list">List All Modules</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/newgrade">Add Grade</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/listgrades">All Grades</a>&nbsp;&nbsp;&nbsp;&nbsp;
     </h3>
-    <br /><br /><br />
+    <br /><br />
 </center>
 
 <div align="center">
