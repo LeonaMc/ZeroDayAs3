@@ -4,6 +4,8 @@
 Previous project commits were made to the following repository (changed due to project restructure):
 https://github.com/LeonaMc/ZD
 
+This project is a simple University Web Application. Screenshots of the app can be seen below.
+
 # Collaborators
 Leona McNulty<br />
 Anna Davison<br />
@@ -22,12 +24,13 @@ grant all privileges on *.* to 'root'@'localhost';<br />
 # How to run:
 1. Ensure database, user and password have all been created in MySQL Command Line Client.<br />
 2. Project uses Java 8. If project doesn't run, check Java version.<br />
-3. Go to the folder where the project is stored and type the following to run the App:<br />
+3. In the terminal, go to the folder where the project is stored and type the following to run the App:<br />
 mvn spring-boot:run<br />
 4. Go to web browser and type the following to direct you to the login page of the App:<br />
 localhost:8080/login<br />
 
 # Diary:
+
 Leona: 
 
        Creation and styling of login and registration pages. 
