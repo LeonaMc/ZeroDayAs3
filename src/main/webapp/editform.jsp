@@ -15,20 +15,21 @@
 <body>
 <center>
     <h1>Modules Management</h1>
-    <h2>
+    <br /><br /><br />
+    <h3>
         <a href="/new">Add New Module</a>
-        &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
         <a href="/list">List All Modules</a>
+    </h3>
+    <br /><br /><br />
 
-    </h2>
-</center>
 <div align="center">
     <form action="/staffWelcome" method="post">
         <table border="1" cellpadding="5" class="table table-striped">
             <caption>
-                <h2>
+                <h3>
                     Edit Module
-                </h2>
+                </h3>
             </caption>
             <input type="hidden" name="id" value="<c:out value='${module.id}' />"  />
             <tr>
@@ -79,5 +80,6 @@
 
     </form>
 </div>
+</center>
 </body>
 </html>
