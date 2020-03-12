@@ -1,35 +1,55 @@
+<!-- Reference: https://stackoverflow.com/questions/31703396/d3-pie-chart-element-popout/31706125#31706125 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 		 pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 
 <html>
 <head>
+	<style>
+		.centered {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			margin-top: -50px;
+			margin-left: -100px;
+		}
+	</style>
 
 	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<meta charset="utf-8">
 	<title>Module Enrolment</title>
+	<link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
+	<link href="${contextPath}/resources/css/common.css" rel="stylesheet">
 
 </head>
 <body>
 <center>
-	<h1>Statistics</h1>
-	<h2>
-		<a href="/welcome">Back to Home Page</a> &nbsp;&nbsp;&nbsp; <a
-			href="/listAllEnroledModules">View Available Modules</a>
-	</h2>
-	<h2>
+	<h1>STATISTICS</h1>
+	<h3>
+		<a href="/welcome">Back to Home Page</a> &nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="/listAllEnroledModules">View Available Modules</a> &nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="/listActiveEnrolledModules">View Current Modules</a>
-	</h2>
-</center>
+	</h3>
 
 <div id="content">
 
-	</br> </br>
+	</br> </br><br />
+	<h2>Nationalities</h2>
+	<br />
+	<p>The following data represents the nationalities of students:</p><br />
+
 	<c:forEach items="${nationalitiesMap}" var="entry">
-	Nationnality = ${entry.key}, Number = ${entry.value.size()}<br>
+	${entry.value.size()} from ${entry.key} <br>
 	</c:forEach>
 
 </br> </br> </br>
 	<h2>Gender</h2>
+	<br />
+	<p>The following pie chart represents the number of male vs female students:</p>
+	<br /><br/>
 	<script type="text/javascript">
 		var w = 300, //width
 				h = 300, //height
@@ -44,7 +64,7 @@
 			"value" : ${femals}
 		} ];
 
-		var vis = d3.select("body").append("svg:svg") //create the SVG element inside the <body>
+		var vis = d3.select("body").append("svg:svg") .attr('transform', 'translate(375,20)')//create the SVG element inside the <body>
 				.data([ data ]) //associate our data with the document
 				.attr("width", w) //set the width and height of our visualization (these will be attributes of the <svg> tag
 				.attr("height", h).append("svg:g") //make a group to hold our pie chart
@@ -85,6 +105,6 @@
 
 
 
-
+</center>
 </body>
 </html>
