@@ -4,7 +4,7 @@
 Previous project commits were made to the following repository (changed due to project restructure): <br />
 https://github.com/LeonaMc/ZD
 
-This project is a simple University Web Application. Screenshots of the app can be seen below.
+This project is a simple University Web Application. Staff mode can be accessed from the login page without registeration, student mode requires registration. Screenshots of the app can be seen below.
 
 # Collaborators
 Leona McNulty<br />
