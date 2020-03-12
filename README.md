@@ -132,6 +132,10 @@ Ciarán:
 
 ![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/13-AddANewModule.PNG)
 
+#### Edit Module Details (Staff Mode)
+
+![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/15-EditModuleDetails.PNG)
+
 #### List of Student Grades (Staff Mode)
 
 ![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/14-ListOfStudentGrades.PNG)
