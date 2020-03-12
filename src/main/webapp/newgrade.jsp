@@ -28,7 +28,14 @@
 
 <div class="container">
     <form:form method="POST" modelAttribute="newgrade" class="form-signin">
-        <caption><center><h2 class="form-signin-heading">Input grade details</h2></center></caption>
+        <caption>
+            <center>
+                <h3 style="color:#808080">Add New Grade</h3>
+                <br />
+            </center>
+        </caption>
+
+
 
         <spring:bind path="studentID">
             <div >
