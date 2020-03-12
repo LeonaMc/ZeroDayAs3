@@ -14,21 +14,18 @@
 </head>
 <body>
 <center>
-	<h1>Module Management</h1>
-	<h2>
-		<a href="/moduleEnrolment">Back to Module Management</a> &nbsp;&nbsp;&nbsp; <a
-			href="/listAllEnroledModules">Enrol in a Module</a>
-	</h2>
-	<h2>
-		<a href="/listActiveEnrolledModules">View Current Modules</a>&nbsp;&nbsp;
+	<h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
+	<br /><br /><br />
+	<h1>Student Area</h1>
+	<br /><br /><br />
+	<h3>
+		<a href="/welcome">Back to Home</a> &nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="/listAllEnroledModules">Enrol in a Module</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="/listActiveEnrolledModules">Current Modules</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="/viewGrades">View Grades</a>&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="/statistics">Statistics</a><br />
-	</h2>
-
-	<h2>
-		<a href="/welcome">Back to Home</a> &nbsp;&nbsp;&nbsp; <a
-			href="/listAllEnroledModules">Enrol in a Module</a><br />
-	</h2>
-
+	</h3>
+	</br> </br><br />
 </center>
 
 <div align="center">

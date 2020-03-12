@@ -17,6 +17,7 @@
         </form>
 
         <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
+        <br /><br /><br />
         <h3><a href="/payFees">Pay Fees</a></h3>
         <h3><a href="/moduleEnrolment">Module Enrolment</a></h3>
         <h3><a href="/viewGrades">View Grades</a></h3>

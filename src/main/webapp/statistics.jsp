@@ -15,15 +15,23 @@
 	<link href="${contextPath}/resources/css/common.css" rel="stylesheet">
 </head>
 <body>
+
 <center>
-	<h1>Statistics</h1>
+	<h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
+	<br /><br /><br />
+	<h1>Student Area</h1>
 	<br /><br /><br />
 	<h3>
-		<a href="/welcome">Back to Home Page</a> &nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="/listAllEnroledModules">View Available Modules</a> &nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="/listActiveEnrolledModules">View Current Modules</a>
+		<a href="/welcome">Back to Home</a> &nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="/listAllEnroledModules">Enrol in a Module</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="/listActiveEnrolledModules">Current Modules</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="/viewGrades">View Grades</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="/statistics">Statistics</a><br />
 	</h3>
 	</br> </br><br />
+</center>
+
+<center>
 <div id="content">
 	<h3>Nationalities</h3>
 	<br />
