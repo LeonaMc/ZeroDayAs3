@@ -8,26 +8,16 @@
 
 <html>
 <head>
-	<style>
-		.centered {
-			position: fixed;
-			top: 50%;
-			left: 50%;
-			margin-top: -50px;
-			margin-left: -100px;
-		}
-	</style>
-
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<meta charset="utf-8">
 	<title>Module Enrolment</title>
 	<link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
 	<link href="${contextPath}/resources/css/common.css" rel="stylesheet">
-
 </head>
 <body>
 <center>
-	<h1>STATISTICS</h1>
+	<h1>Statistics</h1>
+	<br /><br /><br />
 	<h3>
 		<a href="/welcome">Back to Home Page</a> &nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="/listAllEnroledModules">View Available Modules</a> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -35,9 +25,8 @@
 	</h3>
 
 <div id="content">
-
 	</br> </br><br />
-	<h2>Nationalities</h2>
+	<h3>Nationalities</h3>
 	<br />
 	<p>The following data represents the nationalities of students:</p><br />
 
@@ -46,7 +35,7 @@
 	</c:forEach>
 
 </br> </br> </br>
-	<h2>Gender</h2>
+	<h3>Gender</h3>
 	<br />
 	<p>The following pie chart represents the number of male vs female students:</p>
 	<br /><br/>
