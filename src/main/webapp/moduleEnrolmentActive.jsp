@@ -31,8 +31,9 @@
 <div align="center">
 	<table border="1" cellpadding="5" class="table table-striped">
 		<caption>
-			<h2>List of Active Modules</h2>
+			<center><h3>List of Active Modules</h3></center>
 		</caption>
+		<br />
 		<tr>
 			<th>ID</th>
 			<th>Module</th>
