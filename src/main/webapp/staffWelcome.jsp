@@ -14,19 +14,17 @@
 <body>
 <center>
     <h1>Welcome Staff</h1>
-    <h2>
-        <a href="/new">Add New Module</a>
-        &nbsp;&nbsp;&nbsp;
-        <a href="/list">List All Modules</a>
-
-    </h2>
+    <br /><br /><br />
     <h3>
-        <a href="/gradeChange">List Grades</a>
+        <a href="/login">Back to Login</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/new">Add New Module</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/list">List All Modules</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/gradeChange">Grades</a>
     </h3>
 </center>
 <div align="center">
     <table border="1" cellpadding="5" class="table table-striped">
-        <caption><h2>List of Modules</h2></caption>
+        <caption><center><h2>List of Modules</h2></center></caption>
         <tr>
             <th>ID</th>
             <th>Module</th>

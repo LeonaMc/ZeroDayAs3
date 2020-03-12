@@ -15,7 +15,6 @@
 	<link href="${contextPath}/resources/css/common.css" rel="stylesheet">
 </head>
 <body>
-
 <center>
 	<h1>Statistics</h1>
 	<br /><br /><br />

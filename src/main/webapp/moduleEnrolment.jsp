@@ -15,22 +15,26 @@
 <body>
 <center>
     <h1>Module Management</h1>
-    <h2>
-        <a href="/welcome">Back to Home</a> &nbsp;&nbsp;&nbsp; <a
-            href="/listAllEnroledModules">Enrol in a Module</a><br />
-    </h2>
-    <h2>
-        <a href="/listActiveEnrolledModules">View Current Modules</a>&nbsp;&nbsp;&nbsp;
+    <br /><br /><br />
+    <h3>
+        <a href="/welcome">Back to Home</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/listAllEnroledModules">Enrol in a Module</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/listActiveEnrolledModules">Current Modules</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="/statistics">Statistics</a><br />
-    </h2>
-
+    </h3>
+    </br> </br><br />
 </center>
 
 <div align="center">
     <table border="1" cellpadding="5" class="table table-striped">
+
         <caption>
-            <h2>Enrol in a Module</h2>
+            <center>
+            <h3>Enrol in a Module</h3>
+            <br />
+            </center>
         </caption>
+
         <tr>
             <th>ID</th>
             <th>Module</th>
