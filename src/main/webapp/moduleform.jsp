@@ -22,7 +22,7 @@
     </h2>
 </center>
 <div align="center">
-    <form action="/staffWelcome" method="post">
+    <form action="/staffWelcome" method="post" class="table table-striped">
         <table border="1" cellpadding="5">
             <caption>
                 <h2> Add New Module</h2>

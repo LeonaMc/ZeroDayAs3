@@ -18,7 +18,7 @@
     <h2><a href="/">Go back</a></h2>
 </center>
 <div align="center">
-    <table border="1" cellpadding="5">
+    <table border="1" cellpadding="5" class="table table-striped">
         <caption><h2>List of Grades</h2></caption>
         <tr>
             <th>Student ID</th>

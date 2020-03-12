@@ -24,7 +24,7 @@
 </center>
 <div align="center">
     <form action="/staffWelcome" method="post">
-        <table border="1" cellpadding="5">
+        <table border="1" cellpadding="5" class="table table-striped">
             <caption>
                 <h2>
                     Edit Module

@@ -32,7 +32,7 @@
 </center>
 
 <div align="center">
-	<table border="1" cellpadding="5">
+	<table border="1" cellpadding="5" class="table table-striped">
 		<caption>
 			<h2>List of Active Modules</h2>
 		</caption>

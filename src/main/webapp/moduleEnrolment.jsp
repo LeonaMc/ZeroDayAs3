@@ -27,7 +27,7 @@
 </center>
 
 <div align="center">
-    <table border="1" cellpadding="5" class="table table-dark">
+    <table border="1" cellpadding="5" class="table table-striped">
         <caption>
             <h2>Enrol in a Module</h2>
         </caption>

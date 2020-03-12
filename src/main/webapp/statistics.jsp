@@ -15,6 +15,7 @@
 	<link href="${contextPath}/resources/css/common.css" rel="stylesheet">
 </head>
 <body>
+
 <center>
 	<h1>Statistics</h1>
 	<br /><br /><br />
@@ -23,9 +24,8 @@
 		<a href="/listAllEnroledModules">View Available Modules</a> &nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="/listActiveEnrolledModules">View Current Modules</a>
 	</h3>
-
-<div id="content">
 	</br> </br><br />
+<div id="content">
 	<h3>Nationalities</h3>
 	<br />
 	<p>The following data represents the nationalities of students:</p><br />
