@@ -29,9 +29,11 @@
     <form action="/staffWelcome" method="post">
         <table border="1" cellpadding="5" class="table table-striped">
             <caption>
+                <center>
                 <h3>
                     Edit Module
                 </h3>
+                </center>
             </caption>
             <input type="hidden" name="id" value="<c:out value='${module.id}' />"  />
             <tr>

@@ -26,7 +26,7 @@
 </center>
 <div align="center">
     <table border="1" cellpadding="5" class="table table-striped">
-        <caption><h2>List of Grades</h2></caption>
+        <caption><center><h3>List of Grades</h3></center></caption>
         <tr>
             <th>Student ID</th>
             <th>Student Name</th>

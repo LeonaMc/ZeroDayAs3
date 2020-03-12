@@ -26,7 +26,7 @@
 </center>
 <div align="center">
     <table border="1" cellpadding="5" class="table table-striped">
-        <caption><center><h2>List of Modules</h2></center></caption>
+        <caption><center><h3>List of Modules</h3></center></caption>
         <tr>
             <th>ID</th>
             <th>Module</th>
