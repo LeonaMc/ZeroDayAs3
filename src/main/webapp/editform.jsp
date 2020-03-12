@@ -7,7 +7,6 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="${contextPath}/resources/css/mainstyle.css">
     <title>Modules Store Application</title>
     <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <a href="/list">List All Modules</a>
     </h3>
     <br /><br /><br />
+</center>
 
 <div align="center">
     <form action="/staffWelcome" method="post">
@@ -70,16 +70,14 @@
 
             <tr>
                 <td colspan="2" align="center">
-                <td colspan="2" align="center">
                     <input type="submit" value="Save" />
                 </td>
             </tr>
 
         </table>
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 
     </form>
 </div>
-</center>
 </body>
 </html>
