@@ -8,7 +8,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Fees Paid</title>
+    <title>Fees Paid</title><br /><br /><br />
     <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
 </head>
@@ -17,9 +17,9 @@
 <center>
 <h1>Fees Paid</h1>
 <p>Your fees have already been paid, you can now enrol in modules.</p>
-
-    <a href="/welcome">Back to Home</a>
-    <a href="/moduleEnrolment">Enrol in a Module</a>
+    <br /><br /><br />
+   <h3><a href="/welcome">Back to Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="/listAllEnroledModules">Enrol in a Module</a></h3>
 
 </center>
 </body>
