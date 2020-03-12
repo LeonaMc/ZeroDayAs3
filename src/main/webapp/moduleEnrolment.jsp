@@ -40,7 +40,7 @@
         <caption>
             <center>
             <h3>Enrol in a Module</h3>
-                <h4>If the number of students is 2, enrolment will be unsuccessful</h4>
+                <h4>If the number of students is 2, enrolment is not possible.</h4>
             <br />
             </center>
         </caption>
