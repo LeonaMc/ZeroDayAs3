@@ -15,7 +15,7 @@
 <center>
     <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
     <br /><br /><br />
-    <h1>Student Area</h1>
+    <h1>Staff Area</h1>
     <br /><br /><br />
     <h3>
         <a href="/welcome">Back to Home</a> &nbsp;&nbsp;&nbsp;&nbsp;
