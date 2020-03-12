@@ -40,7 +40,7 @@
         <caption>
             <center>
             <h3>Enrol in a Module</h3>
-                <h4>If the number of students is 2, enrolment is not possible.</h4>
+                <h4>The maximum number of students per module is 2</h4>
             <br />
             </center>
         </caption>
@@ -69,7 +69,8 @@
                     <td><c:if test="${module.users.size() < 2 and !module.closed}">
                         <a href="/modules/enroll/${module.id}" />enroll</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    </c:if> <a href="/modules/cancel/${module.id}" />cancel</a></td>
+                     <a href="/modules/cancel/${module.id}" />cancel</a></td>
+                </c:if>
                 </c:if>
             </tr>
         </c:forEach>
