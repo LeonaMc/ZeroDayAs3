@@ -74,12 +74,64 @@ Ciarán:
 
 # App Screenshots
 
-#### Login Page
-
-![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/1Login.PNG)
 #### Registration Page
 
-![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/2Registration.PNG)
+![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/1-Registration.PNG)
+
+#### Registration Errors 
+
+![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/2-RegistrationErrors.PNG)
+
+#### Student Welcome Page (Student Mode)
+
+![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/3-StudentWelcomePage.PNG)
+
+#### Pay Fees Page (Student Mode)
+
+![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/4-PayFees.PNG)
+
+#### Fees Already Paid Page (Student Mode)
+
+![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/5-FeesAlreadyPaid.PNG)
+
+#### Module Enrolment Page (when fees are paid - Student Mode)
+
+![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/6-ModuleEnrolmentExampleFeesPaid.PNG)
+
+#### Module Enrolment Page (when fees aren't paid - Student Mode)
+
+![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/7-StudentCantEnrolExampleNoFeesPaid.PNG)
+
+#### List of Student's Current Modules (Student Mode)
+
+![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/8-ListOfCurrentlyEnrolledModules.PNG)
+
+#### Student's Grades (Student Mode)
+
+![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/9-ViewGrades.PNG)
+
+#### Statistics Page (Student Mode)
+
+![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/10-StatsPage.PNG)
+
+
+#### List of Modules Offered by the University (Staff Mode)
+
+![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/11-ListOfModulesOfferedByUni.PNG)
+
+#### Add New Grade (Staff Mode)
+
+![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/12-AddANewGrade.PNG)
+
+
+#### Add New Module (Staff Mode)
+
+![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/13-AddANewModule.PNG)
+
+#### List of Student Grades (Staff Mode)
+
+![alt text](https://raw.githubusercontent.com/LeonaMc/ZeroDay/master/imgs/14-ListOfStudentGrades.PNG)
+
 
 # Project Details
 
