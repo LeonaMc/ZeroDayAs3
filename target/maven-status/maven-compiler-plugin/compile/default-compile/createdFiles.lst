@@ -18,6 +18,5 @@ com\zeroday\auth\WebSecurityConfig.class
 com\zeroday\auth\service\UserDetailsServiceImpl.class
 com\zeroday\auth\model\Module.class
 com\zeroday\auth\web\UserController.class
-com\zeroday\auth\model\Student.class
 com\zeroday\auth\exception\AuthorNotFoundException.class
 com\zeroday\auth\model\Grade.class
