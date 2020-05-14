@@ -28,6 +28,9 @@ import com.zeroday.auth.repository.UserRepository;
 import com.zeroday.auth.service.SecurityService;
 import com.zeroday.auth.validator.UserValidator;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @Controller
 public class ModuleController {
 
@@ -46,6 +49,7 @@ public class ModuleController {
     @Autowired
     private SecurityService securityService;
 
+    public Logger logger = LoggerFactory.getLogger(ModuleController.class);
     @RequestMapping({ "/list" })
     public String viewHomePage(Model model) {
         List<Module> listModules = moduleRepository.findAll();
@@ -63,6 +67,7 @@ public class ModuleController {
     public String deleteModule(@PathVariable(value = "id") Long moduleId, Model model) throws ModuleNotFoundException {
         Module module = moduleRepository.findById(moduleId).orElseThrow(() -> new ModuleNotFoundException(moduleId));
         moduleRepository.delete(module);
+        logger.debug("Module " + module.getModule_name() + " has been removed.");
         return viewHomePage(model);
     }
 
@@ -76,6 +81,7 @@ public class ModuleController {
     @PostMapping("/modules")
     public String createNote(@ModelAttribute("module") Module module, Model model) {
         moduleRepository.save(module);
+        logger.debug("Module " + module.getModule_name() + " created.");
         return viewHomePage(model);
     }
 
@@ -84,6 +90,7 @@ public class ModuleController {
     public String updateNote(@ModelAttribute("module") Module module, Model model) throws ModuleNotFoundException {
 
         moduleRepository.save(module);
+        logger.debug("Information for module " + module.getModule_name() + " has been modified.");
 
         return viewHomePage(model);
     }
@@ -146,6 +153,7 @@ public class ModuleController {
             moduleRepository.save(module);
             user.getModules().add(module);
             userRepository.save(user);
+            logger.debug("Student " + user.getFirstName() + " " + user.getLastName() "identified by username " + username + " has registered to the module " + module.getModule_name() + ".");
         }
         model.addAttribute("listEnrolledModules", moduleRepository.findAll());
         return "moduleEnrolment";
@@ -161,6 +169,7 @@ public class ModuleController {
             moduleRepository.save(module);
             user.getModules().remove(module);
             userRepository.save(user);
+            logger.debug("Student " + user.getFirstName() + " " + user.getLastName() "identified by username " + username + " has unregistered from the module " + module.getModule_name() + ".");
         }
 
         model.addAttribute("listEnrolledModules", moduleRepository.findAll());
@@ -194,6 +203,7 @@ public class ModuleController {
             return "newgrade";
         }
         gradeRepository.save(thisgrade);
+        logger.debug("Grade added for module " + thisgrade.getModule() + ". Student: " + thisgrade.getStudentName() + ". Grade: " + thisgrade.getGrade() + ".");
 
         return "redirect:/gradeChange";
     }

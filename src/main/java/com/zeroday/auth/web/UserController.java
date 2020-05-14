@@ -25,6 +25,9 @@ import com.zeroday.auth.validator.UserValidator;
 import javax.swing.JOptionPane;
 import javax.servlet.http.HttpServletRequest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @Controller
 public class UserController {
     @Autowired
@@ -44,6 +47,8 @@ public class UserController {
 
     @Autowired
     private GradeRepository gradeRepository;
+
+    public Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @GetMapping("/registration")
     public String registration(Model model) {
@@ -132,7 +137,7 @@ public class UserController {
         User user = userRepository.findByUsername(username);
         fees.setUser(user);
         feesRepository.save(fees);
-
+        logger.debug("User " + username + " has paid their fees.");
         return "redirect:/welcome";
     }
 
