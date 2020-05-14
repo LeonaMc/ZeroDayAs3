@@ -153,7 +153,7 @@ public class ModuleController {
             moduleRepository.save(module);
             user.getModules().add(module);
             userRepository.save(user);
-            logger.debug("Student " + user.getFirstName() + " " + user.getLastName() "identified by username " + username + " has registered to the module " + module.getModule_name() + ".");
+            logger.debug("Student " + user.getFirstName() + " " + user.getLastName() + "identified by username " + username + " has registered to the module " + module.getModule_name() + ".");
         }
         model.addAttribute("listEnrolledModules", moduleRepository.findAll());
         return "moduleEnrolment";
@@ -169,7 +169,7 @@ public class ModuleController {
             moduleRepository.save(module);
             user.getModules().remove(module);
             userRepository.save(user);
-            logger.debug("Student " + user.getFirstName() + " " + user.getLastName() "identified by username " + username + " has unregistered from the module " + module.getModule_name() + ".");
+            logger.debug("Student " + user.getFirstName() + " " + user.getLastName() + "identified by username " + username + " has unregistered from the module " + module.getModule_name() + ".");
         }
 
         model.addAttribute("listEnrolledModules", moduleRepository.findAll());
