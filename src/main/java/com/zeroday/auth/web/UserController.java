@@ -23,6 +23,7 @@ import com.zeroday.auth.service.SecurityService;
 import com.zeroday.auth.service.UserService;
 import com.zeroday.auth.validator.UserValidator;
 import javax.swing.JOptionPane;
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class UserController {
