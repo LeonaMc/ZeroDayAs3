@@ -80,8 +80,8 @@ public class User {
     }
 
     public void setPassword(String password) {
-        //password = password + "sugar";
-        //password = DigestUtils.sha256Hex(password);
+        password = password + "sugar";
+        password = DigestUtils.sha256Hex(password);
         this.password = password;
     }
 
@@ -90,8 +90,8 @@ public class User {
     }
 
     public void setPasswordConfirm(String passwordConfirm) {
-        //passwordConfirm = passwordConfirm + "sugar";
-        //passwordConfirm = DigestUtils.sha256Hex(passwordConfirm);
+        passwordConfirm = passwordConfirm + "sugar";
+        passwordConfirm = DigestUtils.sha256Hex(passwordConfirm);
         this.passwordConfirm = passwordConfirm;
     }
 
