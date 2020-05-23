@@ -1,7 +1,5 @@
 package com.zeroday.auth.model;
 
-import org.apache.commons.codec.digest.DigestUtils;
-
 import java.util.Set;
 
 import javax.persistence.Column;
