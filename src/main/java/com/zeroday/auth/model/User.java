@@ -79,21 +79,13 @@ public class User {
         return password;
     }
 
-    public void setPassword(String password) {
-        password = password + "sugar";
-        password = DigestUtils.sha256Hex(password);
-        this.password = password;
-    }
+    public void setPassword(String password) {this.password = password; }
 
     public String getPasswordConfirm() {
         return passwordConfirm;
     }
 
-    public void setPasswordConfirm(String passwordConfirm) {
-        passwordConfirm = passwordConfirm + "sugar";
-        passwordConfirm = DigestUtils.sha256Hex(passwordConfirm);
-        this.passwordConfirm = passwordConfirm;
-    }
+    public void setPasswordConfirm(String passwordConfirm) {this.passwordConfirm = passwordConfirm; }
 
     public Set<Role> getRoles() {
         return roles;
