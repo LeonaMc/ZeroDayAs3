@@ -27,9 +27,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+
             .authorizeRequests()
                 // Add file here to bypass registration
                 .antMatchers("/resources/**", "/**", "/registration", "/staffWelcome", "/moduleform", "/editform", "/new", "newEnrolModule", "/list", "/modules/save", "/modules/**").permitAll().anyRequest().authenticated()
+                .and()
+            .csrf()
                 .and()
             .formLogin()
                 .loginPage("/login")
