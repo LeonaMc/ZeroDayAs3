@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.zeroday.auth.exception.AuthorNotFoundException;
 import com.zeroday.auth.exception.ModuleNotFoundException;
 import com.zeroday.auth.model.Grade;
 import com.zeroday.auth.model.Module;
@@ -98,7 +97,7 @@ public class ModuleController {
     // Get a Single Note
     @GetMapping("/modules/{id}")
     public String getNoteById(@PathVariable(value = "id") Long moduleId, Model model)
-            throws ModuleNotFoundException, AuthorNotFoundException {
+            throws ModuleNotFoundException {
         Module module = moduleRepository.findById(moduleId).orElseThrow(() -> new ModuleNotFoundException(moduleId));
         model.addAttribute("module", module);
 

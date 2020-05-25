@@ -114,7 +114,7 @@ public class UserValidator implements Validator {
 
         RuleResult result = validator.validate(new PasswordData(passwordData));
         if(!result.isValid()){
-            return "invalid";
+            return "Invalid Password. Try Again.";
         }
         return "valid";
     }
