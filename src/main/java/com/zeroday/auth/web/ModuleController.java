@@ -25,7 +25,7 @@ import com.zeroday.auth.repository.GradeRepository;
 import com.zeroday.auth.repository.ModuleRepository;
 import com.zeroday.auth.repository.UserRepository;
 import com.zeroday.auth.service.SecurityService;
-import com.zeroday.auth.validator.UserValidator;
+import com.zeroday.auth.validator.UserValidatorRegistration;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,7 +37,7 @@ public class ModuleController {
     ModuleRepository moduleRepository;
 
     @Autowired
-    private UserValidator userValidator;
+    private UserValidatorRegistration userValidatorRegistration;
 
     @Autowired
     GradeRepository gradeRepository;
@@ -196,7 +196,7 @@ public class ModuleController {
     @PostMapping("/newgrade")
     public String newgrade(@ModelAttribute("newgrade") Grade thisgrade, BindingResult bindingResult) {
 
-        userValidator.validateGrades(thisgrade, bindingResult);
+        userValidatorRegistration.validateGrades(thisgrade, bindingResult);
 
         if (bindingResult.hasErrors()) {
             return "newgrade";

@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-public class UserValidator implements Validator {
+public class UserValidatorRegistration implements Validator {
     @Autowired
     private UserService userService;
 

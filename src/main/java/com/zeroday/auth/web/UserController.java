@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.Validator;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,9 +20,7 @@ import com.zeroday.auth.repository.GradeRepository;
 import com.zeroday.auth.repository.UserRepository;
 import com.zeroday.auth.service.SecurityService;
 import com.zeroday.auth.service.UserService;
-import com.zeroday.auth.validator.UserValidator;
-import javax.swing.JOptionPane;
-import javax.servlet.http.HttpServletRequest;
+import com.zeroday.auth.validator.UserValidatorRegistration;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,7 +34,7 @@ public class UserController {
     private SecurityService securityService;
 
     @Autowired
-    private UserValidator userValidator;
+    private UserValidatorRegistration userValidatorRegistration;
 
     @Autowired
     private FeesRepository feesRepository;
@@ -64,7 +61,7 @@ public class UserController {
 
     @PostMapping("/registration")
     public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
-        userValidator.validate(userForm, bindingResult);
+        userValidatorRegistration.validate(userForm, bindingResult);
 
         if (bindingResult.hasErrors()) {
             return "registration";
@@ -128,7 +125,7 @@ public class UserController {
     @PostMapping("/payFees")
     public String payFees(@ModelAttribute("payFees") payFees fees, BindingResult bindingResult) {
 
-        userValidator.validateFees(fees, bindingResult);
+        userValidatorRegistration.validateFees(fees, bindingResult);
 
         if (bindingResult.hasErrors()) {
             return "payFees";
