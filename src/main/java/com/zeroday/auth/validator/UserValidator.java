@@ -10,6 +10,11 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
+import org.passay.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Component
 public class UserValidator implements Validator {
     @Autowired
@@ -36,8 +41,9 @@ public class UserValidator implements Validator {
         }
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "NotEmpty");
-        if (user.getPassword().length() < 8 || user.getPassword().length() > 32) {
-            errors.rejectValue("password", "Size.userForm.password");
+        String result = userPasswordValidation(user.getPassword());
+        if(!result.equalsIgnoreCase("valid")){
+            errors.rejectValue("password", null,result);
         }
 
         if (!user.getPasswordConfirm().equals(user.getPassword())) {
@@ -96,4 +102,21 @@ public class UserValidator implements Validator {
             errors.rejectValue("grade", "Size.newgrade.grade");
         }
     }
+
+    private String userPasswordValidation(String passwordData){
+        PasswordValidator validator = new PasswordValidator(Arrays.asList(
+                new LengthRule(8, 100),
+                new CharacterRule(EnglishCharacterData.UpperCase, 1),
+                new CharacterRule(EnglishCharacterData.LowerCase, 1),
+                new CharacterRule(EnglishCharacterData.Digit, 1),
+                new CharacterRule(EnglishCharacterData.Special, 1)
+        ));
+
+        RuleResult result = validator.validate(new PasswordData(passwordData));
+        if(!result.isValid()){
+            return "invalid";
+        }
+        return "valid";
+    }
+
 }
