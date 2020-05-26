@@ -35,7 +35,6 @@
 
             <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
             <h4 class="text-center"><a href="${contextPath}/registration">Create an account</a></h4>
-            <h4 class="text-right"><a href="${contextPath}/staffWelcome">Staff Mode</a></h4>
 
 
         </div>
