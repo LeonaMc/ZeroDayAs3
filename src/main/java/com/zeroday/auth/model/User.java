@@ -183,5 +183,12 @@ public class User {
         this.payFeesSet = payFeesSet;
     }
 
+    public Set<WrongAttempt> getWrongAttempts() {
+        return wrongAttempts;
+    }
+
+    public void setWrongAttempts(Set<WrongAttempt> wrongAttempts) {
+        this.wrongAttempts = wrongAttempts;
+    }
 
 }
