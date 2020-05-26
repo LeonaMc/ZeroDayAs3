@@ -8,7 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
@@ -56,6 +55,8 @@ public class User {
     @OneToMany(mappedBy="user")
     private Set<payFees> payFeesSet;
 
+    @OneToMany(mappedBy="user")
+    private Set<WrongAttempt> wrongAttempts;
 
     public Long getId() {
         return id;
@@ -190,5 +191,4 @@ public class User {
     public void setWrongAttempts(Set<WrongAttempt> wrongAttempts) {
         this.wrongAttempts = wrongAttempts;
     }
-
 }
