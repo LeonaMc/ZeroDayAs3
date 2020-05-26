@@ -1,20 +1,20 @@
 
 # ZeroDay
 
-This project is a simple University Web Application that aims to secure a previous, more vulnerable version of the app. Screenshots of the app can be seen below.
+This project is a simple University Web Application that aims to secure a previous, more vulnerable version of the app. Screenshots can be seen below.
 
 Assignment 1 can be accessed using the following link: <br />
 https://github.com/LeonaMc/ZeroDay
 
-# Group Leader:
+## Group Leader:
 Leona McNulty
-# Team Members:
-Ciarán Conlon, Anna Davison
+## Team Members:
+Leona McNulty, Ciarán Conlon, Anna Davison
 
-# Database creation:
-create database library;<br />
-create user 'root'@'localhost' identified by 'root';<br />
-grant all on library.* to 'root'@'localhost';<br />
+## Database creation:
+mysql> create database library;<br />
+mysql> create user 'root'@'localhost' identified by 'root';<br />
+mysql> grant all on library.* to 'root'@'localhost';<br />
 
 # How to run:
 1. Ensure database, user and password have all been created in MySQL Command Line Client.<br />
