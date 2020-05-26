@@ -68,7 +68,7 @@ public class UserController {
         }
 
         userService.save(userForm);
-
+     // Auto-login removed to increase security 
      //   securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
 
         return "redirect:/welcome";
