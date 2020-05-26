@@ -107,8 +107,14 @@ public class UserValidatorRegistration implements Validator {
         if (user.getCardNumber().length() != 16) {
             errors.rejectValue("cardNumber", "Size.payFees.cardNumber");
         }
+        if (!StringUtils.isNumeric(user.getCardNumber())) {
+            errors.rejectValue("cardNumber", "Type.payFees.cardNumber");
+        }
         if (user.getSecurityCode().length() != 3) {
             errors.rejectValue("securityCode", "Size.payFees.securityCode");
+        }
+        if (!StringUtils.isNumeric(user.getSecurityCode())) {
+            errors.rejectValue("securityCode", "Type.payFees.securityCode");
         }
     }
 
