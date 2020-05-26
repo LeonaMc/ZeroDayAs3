@@ -1,9 +1,9 @@
 package com.zeroday.auth.service;
 
 import com.zeroday.auth.model.WrongAttempt;
-import java.time.LocalDate;
 
-public class WrongAttemptService {
+
+public interface WrongAttemptService {
 
     WrongAttempt saveUserWrongAttempt(WrongAttempt wrongAttempt);
 

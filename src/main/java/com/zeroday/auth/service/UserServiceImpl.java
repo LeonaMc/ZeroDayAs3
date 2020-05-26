@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
     private BCryptPasswordEncoder bCryptPasswordEncoder;
     @Autowired
     private WrongAttemptService wrongAttemptService;
-    @Value("${wrong_attempt_cocurrent_count}")
+    @Value("${wrong_attempt_concurrent_count}")
     private int wrongAttemptCount;
     @Value("${wrong_attempt_blacklist_count}")
     private int wrongBlackListCount;
