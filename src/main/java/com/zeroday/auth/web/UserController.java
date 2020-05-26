@@ -1,16 +1,20 @@
 package com.zeroday.auth.web;
 
+import java.security.Principal;
 import java.util.List;
 
+import com.zeroday.auth.validator.LoginValidator;
+import com.zeroday.auth.validator.UserValidatorRegistration;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.WebAttributes;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import com.zeroday.auth.model.Grade;
 import com.zeroday.auth.model.User;
@@ -20,7 +24,9 @@ import com.zeroday.auth.repository.GradeRepository;
 import com.zeroday.auth.repository.UserRepository;
 import com.zeroday.auth.service.SecurityService;
 import com.zeroday.auth.service.UserService;
-import com.zeroday.auth.validator.UserValidatorRegistration;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,6 +53,44 @@ public class UserController {
 
     public Logger logger = LoggerFactory.getLogger(UserController.class);
 
+    @GetMapping("/login-error")
+    public String login(HttpServletRequest request, Model model) {
+        HttpSession session = request.getSession(false);
+        String errorMessage = null;
+        if (session != null) {
+            AuthenticationException ex = (AuthenticationException) session.getAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);
+            if (ex != null) {
+                errorMessage = ex.getMessage();
+            }
+        }
+        model.addAttribute("error", errorMessage);
+        return "/login";
+    }
+
+    @GetMapping("/perform-login")
+    public String performLogin(Model model, HttpServletRequest request, Principal principal,Authentication authentication) {
+        if(null == principal){
+            return "/login";
+        }
+        String determineURL = null;
+        try {
+            determineURL = determineURL(authentication);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        String result = userService.loginValidation(principal.getName(), request);
+        if (result.equalsIgnoreCase(LoginValidator.VALID)) {
+            return determineURL;
+        } else {
+            model.addAttribute("error", result);
+            HttpSession session= request.getSession(false);
+            SecurityContextHolder.clearContext();
+            session.removeAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);
+            session.invalidate();
+            return "/login";
+        }
+    }
+
     @GetMapping("/registration")
     public String registration(Model model) {
         model.addAttribute("userForm", new User());
@@ -62,45 +106,52 @@ public class UserController {
     @PostMapping("/registration")
     public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
         userValidatorRegistration.validate(userForm, bindingResult);
-
         if (bindingResult.hasErrors()) {
             return "registration";
         }
-
         userService.save(userForm);
-     // Auto-login removed to increase security 
-     //   securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
+        // Auto-login functionality removed for security reasons
+        // securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
+        return "redirect:/login";
+    }
 
-        return "redirect:/welcome";
+    @GetMapping("/user/dashboard")
+    public String userDashboard(HttpSession session, Model model) {
+        if (session == null) {
+            return "/login";
+        }
+        if (null == session.getAttribute("userName")) {
+            return "/login";
+        }
+        return "/";
     }
 
     @GetMapping("/login")
     public String login(Model model, String error, String logout) {
-        if (error != null)
+        if (error != null) {
             model.addAttribute("error", "Your username and password is invalid.");
-
+        }
         if (logout != null)
             model.addAttribute("message", "You have been logged out successfully.");
-
         return "login";
     }
 
-    @GetMapping({ "/", "/welcome" })
+    @GetMapping({"/", "/welcome"})
     public String welcome(Model model) {
         return "welcome";
     }
 
-    @GetMapping({ "/gradeChange" })
+    @GetMapping({"/gradeChange"})
     public String gradeChange(Model model) {
         return "gradeChange";
     }
 
-    @GetMapping({ "/moduleEnrolment" })
+    @GetMapping({"/moduleEnrolment"})
     public String moduleEnrolment(Model model) {
         return "moduleEnrolment";
     }
 
-    @GetMapping({ "/viewGrades" })
+    @GetMapping({"/viewGrades"})
     public String viewGrades(Model model) {
         String username = securityService.findLoggedInUsername();
         User user = userRepository.findByUsername(username);
@@ -109,14 +160,17 @@ public class UserController {
         return "viewGrades";
     }
 
-    @GetMapping({ "/payFees" })
-    public String payFees(@ModelAttribute("payFees") payFees payFee, Model model) {
+    @GetMapping({"/payFees"})
+    public String payFees(@ModelAttribute("payFees") payFees payFee, HttpSession session, Model model) {
+        if (null == session.getAttribute("userName")) {
+            return "/login";
+        }
         String username = securityService.findLoggedInUsername();
         User user = userRepository.findByUsername(username);
         if (user.getPayFeesSet().isEmpty()) {
             model.addAttribute("payFees", new payFees());
             return "payFees";
-        }else{
+        } else {
             model.addAttribute("error", "Fees have already been paid.");
             return "feeshavebeenpaid";
         }
@@ -146,4 +200,32 @@ public class UserController {
         return "login";
     }
 
+
+    protected String determineURL(Authentication authentication) throws IllegalAccessException {
+        boolean isAdmin = false;
+        boolean isStaff = false;
+        boolean isStudent = false;
+        OUTER:
+        for (GrantedAuthority authority : authentication.getAuthorities()) {
+            switch (authority.getAuthority()) {
+                case "ROLE_ADMIN":
+                    isAdmin = true;
+                    break OUTER;
+                case "ROLE_STAFF":
+                    isStaff = true;
+                case "ROLE_STUDENT":
+                    isStudent = true;
+            }
+        }
+        if (isAdmin) {
+            return "/welcome";
+        } else if(isStaff){
+            return "/staffWelcome";
+        }else if (isStudent){
+            return "/student";
+        }
+        else {
+            throw new IllegalAccessException();
+        }
+    }
 }

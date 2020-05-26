@@ -1,5 +1,6 @@
 package com.zeroday.auth.service;
 
+import com.zeroday.auth.validator.LoginValidator;
 import com.zeroday.auth.model.User;
 import com.zeroday.auth.repository.RoleRepository;
 import com.zeroday.auth.repository.UserRepository;
@@ -9,7 +10,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashSet;
-import com.zeroday.auth.validator.LoginValidator;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -19,10 +19,13 @@ public class UserServiceImpl implements UserService {
     private RoleRepository roleRepository;
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
+
     @Autowired
     private WrongAttemptService wrongAttemptService;
+
     @Value("${wrong_attempt_concurrent_count}")
     private int wrongAttemptCount;
+
     @Value("${wrong_attempt_blacklist_count}")
     private int wrongBlackListCount;
 
@@ -39,9 +42,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void delete(User username){
+    public void delete(User username) {
         userRepository.delete(username);
-    };
+    }
+
 
     @Override
     public String loginValidation(String userName, HttpServletRequest request) {
@@ -52,7 +56,7 @@ public class UserServiceImpl implements UserService {
         } else {
             int attemptBlackListCount = wrongAttemptService.countWrongAttemptByIpAndDateAndUserName(getIpAddress(request), userName);
             if (wrongBlackListCount <= attemptBlackListCount) {
-                result = "Your IP now black list.";
+                result = "Your IP has been blacklisted.";
             }
         }
         return result;
