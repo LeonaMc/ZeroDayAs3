@@ -42,7 +42,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 // Add file here to bypass registration
-                .antMatchers("/resources/**", "/**", "/registration", "/staffWelcome", "/moduleform", "/editform", "/new", "newEnrolModule", "/list", "/modules/save", "/modules/**")
+                .antMatchers("/resources/**", "/**", "/registration", "/moduleform", "/editform", "/new", "newEnrolModule", "/list", "/modules/save", "/modules/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
