@@ -6,8 +6,6 @@ This project is a simple University Web Application that aims to secure a previo
 Assignment 1 can be accessed using the following link: <br />
 https://github.com/LeonaMc/ZeroDay
 
-## Group Leader:
-Leona McNulty
 ## Team Members:
 Leona McNulty, Ciarán Conlon, Anna Davison
 
@@ -16,7 +14,7 @@ mysql> create database library;<br />
 mysql> create user 'root'@'localhost' identified by 'root';<br />
 mysql> grant all on library.* to 'root'@'localhost';<br />
 
-# How to run:
+## How to run:
 1. Ensure database, user and password have all been created in MySQL Command Line Client.<br />
 2. Project uses Java 8. If project doesn't run, check Java version.<br />
 3. In the terminal, go to the folder where the project is stored and type the following to run the App:<br />
@@ -24,7 +22,7 @@ mvn spring-boot:run<br />
 4. Go to web browser and type the following to direct you to the login page of the App:<br />
 localhost:8080/login<br />
 
-# Diary:
+## Diary:
 
 Leona: 
 
@@ -38,7 +36,7 @@ Ciarán:
 
        TODO
 
-# App Screenshots
+## App Screenshots
 
 #### Registration Page
 
