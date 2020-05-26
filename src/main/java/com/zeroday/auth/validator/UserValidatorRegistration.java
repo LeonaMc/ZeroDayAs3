@@ -4,6 +4,7 @@ import com.zeroday.auth.model.User;
 import com.zeroday.auth.model.payFees;
 import com.zeroday.auth.model.Grade;
 import com.zeroday.auth.service.UserService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
@@ -36,7 +37,7 @@ public class UserValidatorRegistration implements Validator {
         if (userService.findByUsername(user.getUsername()) != null) {
             errors.rejectValue("username", "Duplicate.userForm.username");
         }
-        if (user.getUsername().contains("'") || user.getUsername().contains("<") || user.getUsername().contains("<") || user.getUsername().contains("/")) {
+        if (!StringUtils.isAlphanumeric(user.getUsername())) {
             errors.rejectValue("username", "Type.userForm.username");
         }
 
@@ -51,9 +52,25 @@ public class UserValidatorRegistration implements Validator {
         }
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "firstName", "NotEmpty");
+        if (!StringUtils.isAlpha(user.getFirstName())) {
+            errors.rejectValue("firstName", "Type.userForm.firstname");
+        }
+
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "lastName", "NotEmpty");
+        if (!StringUtils.isAlpha(user.getLastName())) {
+            errors.rejectValue("lastName", "Type.userForm.lastname");
+        }
+
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "NotEmpty");
+        if (user.getEmail().contains("'") || user.getEmail().contains("<") || user.getEmail().contains("<") || user.getEmail().contains("/") || !user.getEmail().contains("@edu.com")) {
+            errors.rejectValue("email", "Type.userForm.email");
+        }
+
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "studentNumber", "NotEmpty");
+        if (!StringUtils.isNumeric(user.getStudentNumber())) {
+            errors.rejectValue("studentNumber", "Type.userForm.studentnumber");
+        }
+
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "mobileNum", "NotEmpty");
         if (user.getMobileNum().length() < 7) {
@@ -61,9 +78,20 @@ public class UserValidatorRegistration implements Validator {
         }else if(user.getMobileNum().length() > 30){
             errors.rejectValue("mobileNum", "Size.userForm.mobileNumLong");
         }
+        if (!StringUtils.isNumeric(user.getMobileNum())) {
+            errors.rejectValue("mobileNum", "Type.userForm.mobilenumber");
+        }
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "homeNum", "NotEmpty");
+        if (!StringUtils.isNumeric(user.getHomeNum())) {
+            errors.rejectValue("homeNum", "Type.userForm.homenumber");
+        }
+
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "address", "NotEmpty");
+        if (!StringUtils.isAlphanumericSpace(user.getAddress())) {
+            errors.rejectValue("address", "Type.userForm.address");
+        }
+
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "gender", "NotEmpty");
     }
 
