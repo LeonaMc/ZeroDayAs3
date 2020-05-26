@@ -20,7 +20,8 @@ mysql> grant all on library.* to 'root'@'localhost';<br />
 3. In the terminal, go to the folder where the project is stored and type the following to run the App:<br />
 mvn spring-boot:run<br />
 4. Go to web browser and type the following to direct you to the login page of the App:<br />
-localhost:8080/login<br />
+https://localhost:8443/login (localhost:8080/login should redirect to https://localhost:8443/login but this may not work<br />
+in some browsers).<br />
 
 ## Diary:
 
