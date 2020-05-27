@@ -4,8 +4,6 @@ import org.springframework.web.WebApplicationInitializer;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.SessionTrackingMode;
-import java.util.EnumSet;
 
 public class WebAppInit implements WebApplicationInitializer {
 
