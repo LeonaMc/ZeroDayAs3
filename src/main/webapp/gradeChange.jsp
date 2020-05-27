@@ -12,6 +12,11 @@
     <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
 </head>
 <body>
+<div class="container">
+    <c:if test="${pageContext.request.userPrincipal.name != null}">
+    <form id="logoutForm" method="POST" action="${contextPath}/logout">
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+    </form>
 <center>
     <h1>Staff Area |  <a onclick="document.forms['logoutForm'].submit()">Logout</a></h1>
     <br /><br />
@@ -51,6 +56,8 @@
 
     </table>
     <form><input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/></form>
+</div>
+        </c:if>
 </div>
 </body>
 </html>
