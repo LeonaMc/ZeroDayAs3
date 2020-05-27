@@ -52,7 +52,7 @@ public class UserServiceImpl implements UserService {
         String result = LoginValidator.VALID;
         int attemptCount = wrongAttemptService.countWrongAttemptByDateAndUserName(userName);
         if (wrongAttemptCount <= attemptCount) {
-            result = "Account lock for today";
+            result = "Account locked for today";
         } else {
             int attemptBlackListCount = wrongAttemptService.countWrongAttemptByIpAndDateAndUserName(getIpAddress(request), userName);
             if (wrongBlackListCount <= attemptBlackListCount) {

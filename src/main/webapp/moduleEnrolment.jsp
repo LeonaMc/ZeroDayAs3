@@ -71,8 +71,8 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                        <a href="/modules/cancel/${module.id}" />cancel</a></td>
                 </c:if>
-                    <td><c:if test="${module.users.size() > 2 and !module.closed}">
-                        <a href="/modules/cancel/${module.id}" />cancel</a></td>
+                    <c:if test="${module.users.size() >= 2 and !module.closed}">
+                        <a href="/modulacces/cancel/${module.id}" />cancel</a>
                 </c:if>
                 </c:if>
             </tr>

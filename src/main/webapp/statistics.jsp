@@ -52,9 +52,6 @@
 	<p>Males: ${males}</p>
 	<p>Females: ${females}</p>
 </div>
-
-
-
 </center>
 </body>
 </html>
