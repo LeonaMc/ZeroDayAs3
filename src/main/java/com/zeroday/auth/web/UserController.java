@@ -222,7 +222,7 @@ public class UserController {
         } else if(isStaff){
             return "/staffWelcome";
         }else if (isStudent){
-            return "/student";
+            return "/welcome";
         }
         else {
             throw new IllegalAccessException();

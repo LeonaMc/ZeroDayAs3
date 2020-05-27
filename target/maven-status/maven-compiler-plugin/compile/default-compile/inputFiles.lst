@@ -19,6 +19,7 @@ C:\Users\shish\IdeaProjects\ZeroDayAs3\src\main\java\com\zeroday\auth\service\Us
 C:\Users\shish\IdeaProjects\ZeroDayAs3\src\main\java\com\zeroday\auth\service\UserServiceImpl.java
 C:\Users\shish\IdeaProjects\ZeroDayAs3\src\main\java\com\zeroday\auth\appsecurity\XSSRequestWrapper.java
 C:\Users\shish\IdeaProjects\ZeroDayAs3\src\main\java\com\zeroday\auth\repository\WrongAttemptRepository.java
+C:\Users\shish\IdeaProjects\ZeroDayAs3\src\main\java\com\zeroday\auth\WebSecurityConfig.java
 C:\Users\shish\IdeaProjects\ZeroDayAs3\src\main\java\com\zeroday\auth\appsecurity\ServerConfig.java
 C:\Users\shish\IdeaProjects\ZeroDayAs3\src\main\java\com\zeroday\auth\model\WrongAttempt.java
 C:\Users\shish\IdeaProjects\ZeroDayAs3\src\main\java\com\zeroday\auth\repository\ModuleRepository.java
@@ -27,5 +28,4 @@ C:\Users\shish\IdeaProjects\ZeroDayAs3\src\main\java\com\zeroday\auth\WebApplica
 C:\Users\shish\IdeaProjects\ZeroDayAs3\src\main\java\com\zeroday\auth\model\payFees.java
 C:\Users\shish\IdeaProjects\ZeroDayAs3\src\main\java\com\zeroday\auth\model\Role.java
 C:\Users\shish\IdeaProjects\ZeroDayAs3\src\main\java\com\zeroday\auth\service\WrongAttemptServiceImpl.java
-C:\Users\shish\IdeaProjects\ZeroDayAs3\src\main\java\com\zeroday\auth\appsecurity\WebSecurityConfig.java
 C:\Users\shish\IdeaProjects\ZeroDayAs3\src\main\java\com\zeroday\auth\service\WrongAttemptService.java
