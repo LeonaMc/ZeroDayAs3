@@ -24,16 +24,11 @@ public class AuthenticationFailureListener implements ApplicationListener<Authen
         Authentication authentication = event.getAuthentication();
         final String xfHeader = request.getHeader("X-Forward-For");
         WrongAttempt wrongAttempt = new WrongAttempt();
-        if (null == xfHeader) {
-            wrongAttempt.setRemoteIp(request.getRemoteAddr());
-        } else {
-            wrongAttempt.setRemoteIp(xfHeader.split(",")[0]);
-        }
+        wrongAttempt.setRemoteIp(request.getRemoteAddr());
         if (authentication != null) {
             wrongAttempt.setUserName(authentication.getName());
         }
         WrongAttempt attempt = wrongAttemptService.saveUserWrongAttempt(wrongAttempt);
-        request.setAttribute("error", "ghgfhghffgh ");
         System.out.println("Bad Credentials:: " + attempt);
     }
 }

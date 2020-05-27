@@ -45,6 +45,6 @@ public class WrongAttemptServiceImpl implements WrongAttemptService {
 
     @Override
     public int countWrongAttemptByIpAndDateAndUserName(String remoteIpAddress, String userName) {
-        return wrongAttemptRepository.countAllByAttemptDateAndUserNameAndStatusAndRemoteIp(LocalDate.now(),userName, LoginValidator.WRONG_ATTEMPT_BLACKLIST,remoteIpAddress);
+        return wrongAttemptRepository.countAllByAttemptDateAndStatusAndRemoteIp(LocalDate.now(), LoginValidator.WRONG_ATTEMPT_BLACKLIST,remoteIpAddress);
     }
 }

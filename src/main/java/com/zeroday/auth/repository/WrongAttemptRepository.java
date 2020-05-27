@@ -9,6 +9,6 @@ public interface WrongAttemptRepository extends JpaRepository<WrongAttempt,Long>
 
     int countAllByAttemptDateAndUserNameAndStatus(LocalDate localDate, String userName, String status);
 
-    int countAllByAttemptDateAndUserNameAndStatusAndRemoteIp(LocalDate localDate,String userName,String Status, String remoteAddress);
+    int countAllByAttemptDateAndStatusAndRemoteIp(LocalDate localDate,String Status, String remoteAddress);
 }
 

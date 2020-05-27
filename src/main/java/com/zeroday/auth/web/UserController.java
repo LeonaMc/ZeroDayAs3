@@ -85,7 +85,7 @@ public class UserController {
             model.addAttribute("error", result);
             HttpSession session= request.getSession(false);
             SecurityContextHolder.clearContext();
-            session.removeAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);
+//            session.removeAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);
             session.invalidate();
             return "/login";
         }
