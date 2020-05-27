@@ -13,7 +13,7 @@
 </head>
 <body>
 <center>
-    <h1>Staff Area</h1>
+    <h1>Staff Area |  <a onclick="document.forms['logoutForm'].submit()">Logout</a></h1>
     <br /><br />
     <h3>
         <a href="/login">Back to Login</a> &nbsp;&nbsp;&nbsp;&nbsp;
