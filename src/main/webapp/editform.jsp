@@ -21,7 +21,6 @@
     <h1>Staff Area |  <a onclick="document.forms['logoutForm'].submit()">Logout</a></h1>
     <br /><br />
     <h3>
-        <a href="/login">Back to Login</a> &nbsp;&nbsp;&nbsp;&nbsp;
         <a href="/new">Add New Module</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="/list">List All Modules</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="/newgrade">Add Grade</a>&nbsp;&nbsp;&nbsp;&nbsp;

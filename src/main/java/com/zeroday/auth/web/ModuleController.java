@@ -182,7 +182,7 @@ public class ModuleController {
         Predicate<User> byGender = user -> user.getGender().equals("M");
         List<User> males = users.stream().filter(byGender).collect(Collectors.toList());
         model.addAttribute("males", males.size());
-        model.addAttribute("femals", users.size() - males.size());
+        model.addAttribute("females", users.size() - males.size());
         model.addAttribute("nationalitiesMap", nationalitiesMap);
         return "statistics";
     }
