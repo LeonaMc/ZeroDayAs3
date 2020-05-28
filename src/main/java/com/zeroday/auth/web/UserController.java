@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.zeroday.auth.validator.LoginValidator;
 import com.zeroday.auth.validator.UserValidatorRegistration;
+import com.zeroday.auth.service.WrongAttemptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
@@ -23,7 +24,6 @@ import com.zeroday.auth.repository.FeesRepository;
 import com.zeroday.auth.repository.GradeRepository;
 import com.zeroday.auth.repository.UserRepository;
 import com.zeroday.auth.service.SecurityService;
-import com.zeroday.auth.service.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -34,7 +34,7 @@ import org.slf4j.LoggerFactory;
 @Controller
 public class UserController {
     @Autowired
-    private UserService userService;
+    private WrongAttemptService wrongAttemptService;
 
     @Autowired
     private SecurityService securityService;
@@ -78,7 +78,7 @@ public class UserController {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
-        String result = userService.loginValidation(principal.getName(), request);
+        String result = wrongAttemptService.loginValidation(principal.getName(), request);
         if (result.equalsIgnoreCase(LoginValidator.VALID)) {
             return determineURL;
         } else {
@@ -109,7 +109,7 @@ public class UserController {
         if (bindingResult.hasErrors()) {
             return "registration";
         }
-        userService.save(userForm);
+        wrongAttemptService.save(userForm);
         // Auto-login functionality removed for security reasons
         // securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
         return "redirect:/login";
@@ -194,8 +194,8 @@ public class UserController {
 
     @RequestMapping("/remove/{username}")
     public String deleteUser(@PathVariable(value = "username") String username) {
-        User user = userService.findByUsername(username);
-        userService.delete(user);
+        User user = wrongAttemptService.findByUsername(username);
+        wrongAttemptService.delete(user);
 
         return "login";
     }

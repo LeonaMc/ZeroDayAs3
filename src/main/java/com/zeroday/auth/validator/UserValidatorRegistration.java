@@ -3,7 +3,7 @@ package com.zeroday.auth.validator;
 import com.zeroday.auth.model.User;
 import com.zeroday.auth.model.payFees;
 import com.zeroday.auth.model.Grade;
-import com.zeroday.auth.service.UserService;
+import com.zeroday.auth.service.WrongAttemptService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -11,15 +11,15 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
+
 import org.passay.*;
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Component
 public class UserValidatorRegistration implements Validator {
+
     @Autowired
-    private UserService userService;
+    WrongAttemptService wrongAttemptService;
 
     @Override
     public boolean supports(Class<?> aClass) {
@@ -34,7 +34,7 @@ public class UserValidatorRegistration implements Validator {
         if (user.getUsername().length() < 6 || user.getUsername().length() > 32) {
             errors.rejectValue("username", "Size.userForm.username");
         }
-        if (userService.findByUsername(user.getUsername()) != null) {
+        if (wrongAttemptService.findByUsername(user.getUsername()) != null) {
             errors.rejectValue("username", "Duplicate.userForm.username");
         }
         if (!StringUtils.isAlphanumeric(user.getUsername())) {

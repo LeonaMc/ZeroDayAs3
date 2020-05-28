@@ -1,10 +1,8 @@
 package com.zeroday.auth.appsecurity;
 
-import com.zeroday.auth.service.UserService;
-import com.zeroday.auth.service.UserServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.zeroday.auth.service.WrongAttemptService;
+import com.zeroday.auth.service.WrongAttemptServiceImpl;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.DefaultRedirectStrategy;
@@ -23,7 +21,7 @@ import java.util.Set;
 @Component
 public class SuccessHandler implements AuthenticationSuccessHandler {
 
-    private UserService userService = new UserServiceImpl();
+    private WrongAttemptService wrongAttemptService = new WrongAttemptServiceImpl();
 
     private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 
