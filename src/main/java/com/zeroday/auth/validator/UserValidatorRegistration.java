@@ -6,6 +6,7 @@ import com.zeroday.auth.model.Grade;
 import com.zeroday.auth.service.WrongAttemptService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -17,6 +18,10 @@ import java.util.Arrays;
 
 @Component
 public class UserValidatorRegistration implements Validator {
+
+
+    @Value("${restricted-passwords}")
+    private String restrictedPasswords;
 
     @Autowired
     WrongAttemptService wrongAttemptService;
@@ -49,6 +54,10 @@ public class UserValidatorRegistration implements Validator {
 
         if (!user.getPasswordConfirm().equals(user.getPassword())) {
             errors.rejectValue("passwordConfirm", "Diff.userForm.passwordConfirm");
+        }
+
+        if(isPasswordFromRestrictedList(user.getPassword())) {
+            errors.rejectValue("password", "Type.userForm.restrictedPassword");
         }
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "firstName", "NotEmpty");
@@ -95,6 +104,18 @@ public class UserValidatorRegistration implements Validator {
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "gender", "NotEmpty");
     }
 
+    public boolean isPasswordFromRestrictedList(String password) {
+        String[] passwords = restrictedPasswords.split(",");
+
+        for(int i=0; i<passwords.length; i++) {
+            if(password.equals(passwords[i])) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public void validateFees(Object o, Errors errors) {
         payFees user = (payFees) o;
 
@@ -129,7 +150,7 @@ public class UserValidatorRegistration implements Validator {
         if(!thisGrade.getStudentName().contains(" ")) {
             errors.rejectValue("studentName", "Fullname.newgrade.studentName");
         }
-        if(thisGrade.getModule().length()>45){
+        if(thisGrade.getModule().getModule_name().length()>45){
             errors.rejectValue("module", "Size.newgrade.module");
         }
         if(thisGrade.getGrade()>100 || thisGrade.getGrade() < 0){

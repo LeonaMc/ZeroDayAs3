@@ -53,7 +53,7 @@
 				<td><c:out value="${module.module_name}" /></td>
 
 				<td><c:out value="${module.school}" /></td>
-				<td><c:out value="${module.module_coord}" /></td>
+				<td><c:out value="${module.coordinator.firstName}" /></td>
 				<td><c:out value="${module.module_topic}" /></td>
 
 			</tr>

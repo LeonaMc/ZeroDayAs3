@@ -2,14 +2,7 @@ package com.zeroday.auth.model;
 
 import java.util.Set;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
-import javax.persistence.Transient;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 
@@ -28,7 +21,8 @@ public class Module {
 
     private String school;
 
-    private String module_coord;
+    @ManyToOne
+    private User module_coord;
 
     private String module_topic;
 
@@ -45,7 +39,7 @@ public class Module {
         super();
     }
 
-    public Module(Long id, String module_name, String school, String module_coord, String module_topic,
+    public Module(Long id, String module_name, String school, User module_coord, String module_topic,
                   Boolean enroll) {
         super();
         this.id = id;
@@ -80,11 +74,11 @@ public class Module {
         this.school = school;
     }
 
-    public String getModule_coord() {
+    public User getModule_coord() {
         return module_coord;
     }
 
-    public void setModule_coord(String module_coord) {
+    public void setModule_coord(User module_coord) {
         this.module_coord = module_coord;
     }
 
@@ -121,10 +115,4 @@ public class Module {
     public void setClosed(boolean closed) {
         this.closed = closed;
     }
-
-
-
-
-
-
 }

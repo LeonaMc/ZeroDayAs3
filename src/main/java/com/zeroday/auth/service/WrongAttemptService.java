@@ -14,6 +14,8 @@ public interface WrongAttemptService {
 
     int countWrongAttemptByIpAndDateAndUserName(String remoteIpAddress, String userName);
 
+    String ipValidation(HttpServletRequest request);
+
     void save(User user);
 
     User findByUsername(String username);

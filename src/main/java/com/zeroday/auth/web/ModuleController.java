@@ -6,7 +6,10 @@ import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import com.zeroday.auth.service.GradeService;
+import com.zeroday.auth.service.ModuleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -35,12 +38,16 @@ public class ModuleController {
 
     @Autowired
     ModuleRepository moduleRepository;
+    @Autowired
+    private ModuleService moduleService;
 
     @Autowired
     private UserValidatorRegistration userValidatorRegistration;
 
     @Autowired
     GradeRepository gradeRepository;
+    @Autowired
+    private GradeService gradeService;
 
     @Autowired
     UserRepository userRepository;
@@ -50,8 +57,9 @@ public class ModuleController {
 
     public Logger logger = LoggerFactory.getLogger(ModuleController.class);
     @RequestMapping({ "/list" })
+    @Secured({"ROLE_STAFF", "ROLE_ADMIN"})
     public String viewHomePage(Model model) {
-        List<Module> listModules = moduleRepository.findAll();
+        List<Module> listModules = moduleService.findAllByCurrentUser();
         model.addAttribute("listModules", listModules);
         return "staffWelcome";
     }
@@ -86,9 +94,9 @@ public class ModuleController {
 
     // Update a Note
     @RequestMapping(value = "staffWelcome", method = RequestMethod.POST)
+    @Secured({"ROLE_STAFF", "ROLE_ADMIN"})
     public String updateNote(@ModelAttribute("module") Module module, Model model) throws ModuleNotFoundException {
-
-        moduleRepository.save(module);
+        moduleService.save(module);
         logger.debug("Information for module " + module.getModule_name() + " has been modified.");
 
         return viewHomePage(model);
@@ -113,7 +121,7 @@ public class ModuleController {
     // Create a new Note
     @RequestMapping("/listgrades")
     public String listGrades(Model model) {
-        List<Grade> listGrades = gradeRepository.findAll();
+        List<Grade> listGrades = gradeService.findAllByCurrentUser();
         model.addAttribute("listGrades", listGrades);
         return "listgrades";
     }
@@ -187,23 +195,35 @@ public class ModuleController {
         return "statistics";
     }
 
-    @RequestMapping(value = "/newgrade", method = RequestMethod.GET)
-    public String enterGrade(Model model) {
-        model.addAttribute("newgrade", new Grade());
-        return "newgrade";
+    @RequestMapping(value = "/newgrade/{moduleId}", method = RequestMethod.GET)
+    public String enterGrade(Model model, @PathVariable(required = false, value = "moduleId") Long moduleId) {
+        Module module;
+        if(moduleId != null) {
+            module = moduleService.findOneByCurrentUser(moduleId);
+            Grade grade = new Grade();
+            grade.setModule(module);
+            model.addAttribute("newgrade", grade);
+            return "newgrade";
+        } else {
+            return "redirect:/staffWelcome";
+        }
     }
 
     @PostMapping("/newgrade")
-    public String newgrade(@ModelAttribute("newgrade") Grade thisgrade, BindingResult bindingResult) {
+    @Secured({"ROLE_STAFF", "ROLE_ADMIN"})
+    public String newgrade(Model model, @ModelAttribute("newgrade") Grade thisgrade, BindingResult bindingResult) {
 
-        userValidatorRegistration.validateGrades(thisgrade, bindingResult);
+        if(thisgrade.getModule() != null && moduleService.findOneByCurrentUser(thisgrade.getModule().getId()) != null) {
+            userValidatorRegistration.validateGrades(thisgrade, bindingResult);
 
-        if (bindingResult.hasErrors()) {
-            return "newgrade";
+            if (bindingResult.hasErrors()) {
+                return "newgrade";
+            }
+            gradeRepository.save(thisgrade);
+            logger.debug("Grade added for module " + thisgrade.getModule() + ". Student: " + thisgrade.getStudentName() + ". Grade: " + thisgrade.getGrade() + ".");
+            return "redirect:/gradeChange";
+        } else {
+            return "redirect:/staffWelcome";
         }
-        gradeRepository.save(thisgrade);
-        logger.debug("Grade added for module " + thisgrade.getModule() + ". Student: " + thisgrade.getStudentName() + ". Grade: " + thisgrade.getGrade() + ".");
-
-        return "redirect:/gradeChange";
     }
 }

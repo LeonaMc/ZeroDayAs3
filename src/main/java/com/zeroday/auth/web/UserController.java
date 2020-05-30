@@ -63,6 +63,12 @@ public class UserController {
                 errorMessage = ex.getMessage();
             }
         }
+
+        String result = wrongAttemptService.ipValidation(request);
+        if(result != null) {
+            errorMessage = result;
+        }
+
         model.addAttribute("error", errorMessage);
         return "/login";
     }

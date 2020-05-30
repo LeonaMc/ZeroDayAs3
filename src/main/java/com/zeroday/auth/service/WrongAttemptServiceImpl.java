@@ -67,9 +67,21 @@ public class WrongAttemptServiceImpl implements WrongAttemptService {
         if (wrongAttemptCount <= attemptCount) {
             result = "Account locked for today";
         } else if (wrongBlackListCount <= attemptBlackListCount) {
-                result = "Your IP has been blacklisted.";
+            result = "Your IP has been blacklisted.";
         }else{
-            
+
+        }
+        return result;
+    }
+
+    @Override
+    public String ipValidation(HttpServletRequest request) {
+        String result = null;
+        int attemptBlackListCount = wrongAttemptService.countWrongAttemptByIpAndDateAndUserName(getIpAddress(request), null);
+        if (wrongBlackListCount <= attemptBlackListCount) {
+            result = "Your IP has been blacklisted.";
+        }else{
+
         }
         return result;
     }

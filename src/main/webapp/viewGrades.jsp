@@ -18,40 +18,40 @@
     <form id="logoutForm" method="POST" action="${contextPath}/logout">
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
     </form>
-<center>
-    <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
-    <br /><br /><br />
-    <h1>Student Area</h1>
-    <br /><br /><br />
-    <h3>
-        <a href="/welcome">Back to Home</a> &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="/listAllEnroledModules">Enrol in a Module</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="/listActiveEnrolledModules">Current Modules</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="/viewGrades">View Grades</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="/statistics">Statistics</a><br />
-    </h3>
-    </br> </br><br />
-</center>
-<div align="center">
-    <table border="1" cellpadding="5" class="table table-striped">
-        <caption><center><h3>List of Grades</h3></center></caption>
-        <br />
-        <tr>
-            <th>Student ID</th>
-            <th>Student Name</th>
-            <th>Module</th>
-            <th>Grade</th>
-        </tr>
-        <c:forEach var="grade" items="${listGrades}">
+    <center>
+        <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
+        <br /><br /><br />
+        <h1>Student Area</h1>
+        <br /><br /><br />
+        <h3>
+            <a href="/welcome">Back to Home</a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/listAllEnroledModules">Enrol in a Module</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/listActiveEnrolledModules">Current Modules</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/viewGrades">View Grades</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/statistics">Statistics</a><br />
+        </h3>
+        </br> </br><br />
+    </center>
+    <div align="center">
+        <table border="1" cellpadding="5" class="table table-striped">
+            <caption><center><h3>List of Grades</h3></center></caption>
+            <br />
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Module</th>
+                <th>Grade</th>
+            </tr>
+            <c:forEach var="grade" items="${listGrades}">
             <tr>
                 <td><c:out value="${grade.studentID}" /></td>
                 <td><c:out value="${grade.studentName}" /></td>
-                <td><c:out value="${grade.module}" /></td>
+                <td><c:out value="${grade.module.module_name}" /></td>
                 <td><c:out value="${grade.grade}" /></td>
             </tr>
-        </c:forEach>
-</c:if>
-</div>
+            </c:forEach>
+            </c:if>
+    </div>
 
     </table>
     <form><input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/></form>

@@ -9,13 +9,15 @@ public class Grade {
     private Long studentID;
     @NotBlank
     private String studentName;
-    @NotBlank
-    private String module;
+
+    @ManyToOne
+    private Module module;
     private Long grade;
+
     public Grade(){
         super();
     }
-    public Grade(Long studentID, String studentName,  String module, Long grade) {
+    public Grade(Long studentID, String studentName,  Module module, Long grade) {
         super();
         this.studentID = studentID;
         this.studentName = studentName;
@@ -29,8 +31,8 @@ public class Grade {
     public String getStudentName() { return studentName; }
     public void setStudentName(String studentName) { this.studentName = studentName; }
 
-    public String getModule() { return module; }
-    public void setModule(String module) { this.module = module; }
+    public Module getModule() { return module; }
+    public void setModule(Module module) { this.module = module; }
 
     public Long getGrade() { return grade; }
     public void setGrade(Long grade) { this.grade = grade; }

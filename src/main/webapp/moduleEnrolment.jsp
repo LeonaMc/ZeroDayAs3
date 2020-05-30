@@ -39,9 +39,9 @@
 
         <caption>
             <center>
-            <h3>Enrol in a Module</h3>
+                <h3>Enrol in a Module</h3>
                 <h4>The maximum number of students per module is 2</h4>
-            <br />
+                <br />
             </center>
         </caption>
 
@@ -62,18 +62,18 @@
                 <td><c:out value="${module.module_name}" /></td>
 
                 <td><c:out value="${module.school}" /></td>
-                <td><c:out value="${module.module_coord}" /></td>
+                <td><c:out value="${module.coordinator.firstName}" /></td>
                 <td><c:out value="${module.module_topic}" /></td>
                 <td><c:out value="${module.users.size()}" /></td>
                 <c:if test="${connectedUser.payFeesSet.size() > 0}">
                     <td><c:if test="${module.users.size() < 2 and !module.closed}">
-                        <a href="/modules/enroll/${module.id}" />enroll</a>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <a href="/modules/cancel/${module.id}" />cancel</a></td>
+                    <a href="/modules/enroll/${module.id}" />enroll</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/modules/cancel/${module.id}" />cancel</a></td>
                 </c:if>
                     <c:if test="${module.users.size() >= 2 and !module.closed}">
                         <a href="/modulacces/cancel/${module.id}" />cancel</a>
-                </c:if>
+                    </c:if>
                 </c:if>
             </tr>
         </c:forEach>
