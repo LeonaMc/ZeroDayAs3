@@ -13,10 +13,10 @@ public class GradeService {
     @Autowired
     private GradeRepository gradeRepository;
     @Autowired
-    private UserService userService;
+    private WrongAttemptService wrongAttemptService;
 
     public List<Grade> findAllByCurrentUser() {
-        User currentUser = userService.getCurrentUser();
+        User currentUser = wrongAttemptService.getCurrentUser();
         return gradeRepository.findAllByModuleCoordinator(currentUser);
     }
 }

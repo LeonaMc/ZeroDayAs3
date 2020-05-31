@@ -23,4 +23,7 @@ public interface WrongAttemptService {
     void delete(User username);
 
     String loginValidation(String userName, HttpServletRequest request);
+
+    User getCurrentUser();
+
 }

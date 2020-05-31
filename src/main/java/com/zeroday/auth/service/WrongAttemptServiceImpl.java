@@ -8,6 +8,8 @@ import com.zeroday.auth.model.WrongAttempt;
 import com.zeroday.auth.repository.WrongAttemptRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +18,6 @@ import java.util.HashSet;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.HashSet;
 
 @Service
 public class WrongAttemptServiceImpl implements WrongAttemptService {
@@ -47,7 +48,7 @@ public class WrongAttemptServiceImpl implements WrongAttemptService {
             user = wrongAttemptService.findByUsername(wrongAttempt.getUserName());
         }
         if (null == user) {
-            wrongAttempt.setAttemptMessage("Invalid User Found");
+            wrongAttempt.setAttemptMessage("Bad Credentials");
             wrongAttempt.setStatus("BlackList");
         } else {
             wrongAttempt.setUser(user);
@@ -111,6 +112,14 @@ public class WrongAttemptServiceImpl implements WrongAttemptService {
     @Override
     public void delete(User username) {
         userRepository.delete(username);
+    }
+
+    @Override
+    public User getCurrentUser() {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String username = auth.getName();
+
+        return findByUsername(username);
     }
 
     protected String getIpAddress(HttpServletRequest request) {

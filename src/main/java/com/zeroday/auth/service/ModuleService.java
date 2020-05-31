@@ -11,12 +11,12 @@ import java.util.List;
 @Service
 public class ModuleService {
     @Autowired
-    private UserService userService;
+    private WrongAttemptService wrongAttemptService;
     @Autowired
     private ModuleRepository moduleRepository;
 
     public List<Module> findAllByCurrentUser() {
-        User coordinator = userService.getCurrentUser();
+        User coordinator = wrongAttemptService.getCurrentUser();
         return findByCoordinator(coordinator);
     }
 
@@ -25,7 +25,7 @@ public class ModuleService {
     }
 
     public Module save(Module module) {
-        module.setCoordinator(userService.getCurrentUser());
+        module.setCoordinator(wrongAttemptService.getCurrentUser());
         return moduleRepository.save(module);
     }
 
@@ -35,7 +35,7 @@ public class ModuleService {
     }
 
     public Module findOneByCurrentUser(Long id) {
-        User currentUser = userService.getCurrentUser();
+        User currentUser = wrongAttemptService.getCurrentUser();
         Module module = moduleRepository.findOneByIdAndCoordinator(id, currentUser);
         return module;
     }
