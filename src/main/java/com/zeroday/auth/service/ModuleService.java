@@ -25,7 +25,7 @@ public class ModuleService {
     }
 
     public Module save(Module module) {
-        module.setModule_coord(userService.getCurrentUser());
+        module.setCoordinator(userService.getCurrentUser());
         return moduleRepository.save(module);
     }
 

@@ -22,7 +22,7 @@ public class Module {
     private String school;
 
     @ManyToOne
-    private User module_coord;
+    private User coordinator;
 
     private String module_topic;
 
@@ -39,13 +39,12 @@ public class Module {
         super();
     }
 
-    public Module(Long id, String module_name, String school, User module_coord, String module_topic,
+    public Module(Long id, String module_name, String school, String module_topic,
                   Boolean enroll) {
         super();
         this.id = id;
         this.module_name = module_name;
         this.school = school;
-        this.module_coord = module_coord;
         this.module_topic = module_topic;
 
     }
@@ -74,12 +73,12 @@ public class Module {
         this.school = school;
     }
 
-    public User getModule_coord() {
-        return module_coord;
+    public User getCoordinator() {
+        return coordinator;
     }
 
-    public void setModule_coord(User module_coord) {
-        this.module_coord = module_coord;
+    public void setCoordinator(User coordinator) {
+        this.coordinator = coordinator;
     }
 
     public String getModule_topic() {

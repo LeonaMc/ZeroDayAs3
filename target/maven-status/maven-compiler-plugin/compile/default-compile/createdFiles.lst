@@ -1,1 +1,3 @@
+com\zeroday\auth\service\GradeService.class
 com\zeroday\auth\appsecurity\WebAppInit.class
+com\zeroday\auth\service\ModuleService.class

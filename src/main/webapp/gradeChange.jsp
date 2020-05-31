@@ -22,8 +22,7 @@
             <br /><br />
             <h3>
                 <a href="/new">Add New Module</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="/list">List All Modules</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="/newgrade">Add Grade</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/list">List All Modules</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="/listgrades">All Grades</a>&nbsp;&nbsp;&nbsp;&nbsp;
             </h3>
             <br /><br />

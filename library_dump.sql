@@ -51,7 +51,7 @@ DROP TABLE IF EXISTS `modules`;
 CREATE TABLE `modules` (
   `module_id` bigint NOT NULL AUTO_INCREMENT,
   `closed` bit(1) NOT NULL,
-  `module_coord` varchar(255) DEFAULT NULL,
+  `coordinator` varchar(255) DEFAULT NULL,
   `module_name` varchar(255) DEFAULT NULL,
   `module_topic` varchar(255) DEFAULT NULL,
   `school` varchar(255) DEFAULT NULL,

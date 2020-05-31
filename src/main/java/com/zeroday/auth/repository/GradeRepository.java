@@ -13,7 +13,7 @@ import java.util.List;
 public interface GradeRepository extends JpaRepository<Grade, Long> {
     List<Grade> findByStudentID(Long id);
 
-    @Query("SELECT g FROM Grade g WHERE g.module.module_coord=:coordinator")
+    @Query("SELECT g FROM Grade g WHERE g.module.coordinator=:coordinator")
     List<Grade> findAllByModuleCoordinator(@Param("coordinator") User coordinator);
 }
 
