@@ -41,7 +41,7 @@ public class payFees {
     }
 
     public void setCardNumber(String cardNumber) {
-        this.cardNumber = "1234567812345678";
+        //this.cardNumber = cardNumber;
     }
 
     public String getSecurityCode() {
@@ -49,7 +49,7 @@ public class payFees {
     }
 
     public void setSecurityCode(String securityCode) {
-        this.securityCode = "123";
+        //this.securityCode = securityCode;
     }
 
     public String getExpireDate() {
@@ -57,7 +57,7 @@ public class payFees {
     }
 
     public void setExpireDateString(String expireDate) {
-        this.expireDate = "expireDate";
+        //this.expireDate = expireDate;
     }
 
     public String getCardName() {
@@ -65,7 +65,7 @@ public class payFees {
     }
 
     public void setCardName(String cardName) {
-        this.cardName = "cardName";
+        //this.cardName = cardName;
     }
 
     public Long getFeesId() {
@@ -85,7 +85,7 @@ public class payFees {
     }
 
     public void setExpireDate(String expireDate) {
-        this.expireDate = "expireDate";
+        //this.expireDate = expireDate;
     }
 
 }
