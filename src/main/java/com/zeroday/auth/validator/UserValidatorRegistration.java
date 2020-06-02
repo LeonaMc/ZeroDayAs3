@@ -125,18 +125,18 @@ public class UserValidatorRegistration implements Validator {
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "expireDate", "NotEmpty");
 
 
-//        if (user.getCardNumber().length() != 16) {
-//            errors.rejectValue("cardNumber", "Size.payFees.cardNumber");
-//        }
-//        if (!StringUtils.isNumeric(user.getCardNumber())) {
-//            errors.rejectValue("cardNumber", "Type.payFees.cardNumber");
-//        }
-//        if (user.getSecurityCode().length() != 3) {
-//            errors.rejectValue("securityCode", "Size.payFees.securityCode");
-//        }
-//        if (!StringUtils.isNumeric(user.getSecurityCode())) {
-//            errors.rejectValue("securityCode", "Type.payFees.securityCode");
-//        }
+        if (user.getCardNumber().length() != 16) {
+            errors.rejectValue("cardNumber", "Size.payFees.cardNumber");
+        }
+        if (!StringUtils.isNumeric(user.getCardNumber())) {
+            errors.rejectValue("cardNumber", "Type.payFees.cardNumber");
+        }
+        if (user.getSecurityCode().length() != 3) {
+            errors.rejectValue("securityCode", "Size.payFees.securityCode");
+        }
+        if (!StringUtils.isNumeric(user.getSecurityCode())) {
+            errors.rejectValue("securityCode", "Type.payFees.securityCode");
+        }
     }
 
     public void validateGrades(Object o, Errors errors){
